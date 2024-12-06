@@ -1,0 +1,13 @@
+@import 'vendor/reset';
+@import 'vendor/fonts';
+@import 'vendor/vars';
+@import 'vendor/libs';
+@import 'vendor/mixin';
+@import 'vendor/global';
+
+@import "components/footer";
+@import "components/header";
+@import "components/title-section";
+@import "components/btn";
+
+@import "home/statistics";
