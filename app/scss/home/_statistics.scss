@@ -2,7 +2,7 @@
   @include bg;
   position: relative;
   padding: 55px 0 60px;
-  background-image: url("../images/background-serbia.png");
+  background-image: url("../images/background-serbia.webp");
 
   &::before {
     @include pseudo;

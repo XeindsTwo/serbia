@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta http-equiv="content-type" content="public, max-age=3600">
   <meta name="theme-color" content="#fff">
-  <title>Rubicon</title>
+  <title>Svetogorska</title>
   <link rel="shortcut icon" href="images/icons/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -108,7 +108,52 @@
 <main>
   <section class="apartments">
   <div class="container">
-    
+    <div class="apartments__inner">
+      <div class="apartments__svetogorska">
+        <h2 class="title-section">Svetogorska 27</h2>
+        <p class="apartments__description">
+          Комплекс из <span>28 современных апартаментов</span> в сердце Златибора, популярного курортного региона Сербии. Стабильный
+          спрос на аренду и круглогодичный туристический поток делают этот проект отличным выбором для инвестиций.
+        </p>
+        <div class="apartments__wrapper">
+          <div class="apartments__price before-60" style="background-image: url('images/apar-2.webp')">
+            <p class="apartments__text">
+              Выгодная цена за квадратный метр — отличное предложение на рынке недвижимости.
+            </p>
+          </div>
+          <div class="apartments__price-text">
+            от <span>€2 300</span>
+          </div>
+        </div>
+      </div>
+      <div class="apartments__benefits">
+        <div class="apartments__price before-60" style="background-image: url('images/apar-1.webp')">
+          <p class="apartments__text">
+            Апартаменты в экологически чистом районе с уникальной природой.
+          </p>
+        </div>
+        <ul class="apartments__list">
+          <li class="apartments__item">
+            <img src="images/icons/parking.svg" width="74" height="74" alt="Паркинг">
+            <p>
+              Паркинг для жильцов
+            </p>
+          </li>
+          <li class="apartments__item">
+            <img src="images/icons/clear.svg" width="74" height="74" alt="Чистовой ремонт">
+            <p>
+              Чистовой ремонт или мебелировка
+            </p>
+          </li>
+          <li class="apartments__item">
+            <img src="images/icons/infrastructure.svg" width="74" height="74" alt="Инфраструктура">
+            <p>
+              Удобная инфраструктура
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
   <section class="layout indent">
@@ -122,7 +167,7 @@
         </p>
         <button class="layout__btn" type="button">Получить презентацию</button>
       </div>
-      <img class="layout__img" src="images/layout-plan.png" width="438" height="260" alt="Получить свою планировку">
+      <img class="layout__img" src="images/layout-plan.webp" width="448" height="300" alt="Получить свою планировку">
     </div>
   </div>
 </section>
@@ -262,7 +307,7 @@
   <div class="container">
     <h2 class="title-section">Покупка по шагам — просто и удобно!</h2>
     <ul class="steps__list">
-      <li class="steps__card before-80" style="background-image: url('images/steps/1.png')">
+      <li class="steps__card before-80" style="background-image: url('images/steps/1.webp')">
         <div class="steps__head">
           <span class="steps__name">1 шаг</span>
           <img class="steps__img" src="images/icons/steps-arrow.svg" width="21" height="29" alt="стрелка иконка">
@@ -285,7 +330,7 @@
           мы сделаем все для вашего комфорта.
         </p>
       </li>
-      <li class="steps__card before-80 three" style="background-image: url('images/steps/3.png')">
+      <li class="steps__card before-80 three" style="background-image: url('images/steps/3.webp')">
         <div class="steps__head">
           <span class="steps__name">3 шаг</span>
           <img class="steps__img" src="images/icons/steps-arrow.svg" width="21" height="29"
@@ -297,7 +342,7 @@
           зависимости от вашего гражданства.
         </p>
       </li>
-      <li class="steps__card before-80 four" style="background-image: url('images/steps/4.png')">
+      <li class="steps__card before-80 four" style="background-image: url('images/steps/4.webp')">
         <div class="steps__head">
           <span class="steps__name">4 шаг</span>
         </div>
@@ -308,6 +353,46 @@
         </p>
       </li>
     </ul>
+  </div>
+</section>
+  <section class="contacts indent" id="contacts">
+  <div class="container">
+    <div class="contacts__inner">
+      <div class="contacts__content">
+        <h2 class="contacts__title">
+          Познакомьтесь с проектом Svetogorska 27 ближе!
+        </h2>
+        <p class="contacts__text">
+          Оставьте ваш номер, и мы свяжемся с вами, чтобы предоставить полную презентацию,
+          ответить на вопросы и обсудить детали в удобное время.
+        </p>
+      </div>
+      <form class="contacts__form" method="post">
+        <label>
+          <input class="input" type="text" id="name" name="name" placeholder="Имя" required>
+        </label>
+        <label>
+          <input class="input" data-tel-input type="text" id="phone" name="phone" placeholder="+7 (999) 999-99-99" required>
+        </label>
+        <div class="contacts__agree">
+          <div class="contacts__agree-figure active" data-agree="newsletter">
+            <button class="contacts__agree-btn" type="button">
+              <span class="sr-only">Согласен / Не согласен на обработку данных</span>
+            </button>
+          </div>
+          Согласие на рассылку новостей и рекламных сообщений
+        </div>
+        <div class="contacts__agree">
+          <div class="contacts__agree-figure active" data-agree="privacy-policy">
+            <button class="contacts__agree-btn" type="button">
+              <span class="sr-only">Согласен / Не согласен на обработку данных</span>
+            </button>
+          </div>
+          Согласие с <a href="" target="_blank">политикой конфиденциальности</a>
+        </div>
+        <button class="contacts__btn" type="submit">Отправить</button>
+      </form>
+    </div>
   </div>
 </section>
 </main>
@@ -358,5 +443,5 @@
     </div>
   </div>
 </footer>
-<script src="js/phone-mask.js" type="module"></script>
 <script src="js/main.min.js" type="module"></script>
+<script src="js/phone-mask.js"></script>

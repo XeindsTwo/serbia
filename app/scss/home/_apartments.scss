@@ -1,0 +1,94 @@
+.apartments {
+  margin-bottom: 30px;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__svetogorska {
+    margin-top: 20px;
+    order: 1;
+  }
+
+  .title-section {
+    font-size: 40px;
+    margin-bottom: 14px;
+  }
+
+  &__description {
+    font-size: 15px;
+    font-family: $halvarRg;
+    max-width: 520px;
+    color: rgba($white, .8);
+    margin-bottom: 30px;
+
+    span {
+      color: $white;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__price {
+    @include bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    min-height: 380px;
+    max-height: 380px;
+    padding: 30px;
+    border-radius: 24px;
+    overflow: hidden;
+
+    & > * {
+      position: relative;
+      z-index: 5;
+    }
+  }
+
+  &__text {
+    max-width: 270px;
+    line-height: 1.3;
+  }
+
+  &__price-text {
+    @include flex-center;
+    @include bg;
+    position: absolute;
+    right: -12px;
+    bottom: 25px;
+    z-index: 50;
+    background-position: left;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    gap: 9px;
+    max-width: max-content;
+    background-image: url("../images/icons/apartments-bg.svg");
+    font-size: 22px;
+    padding: 6px 34px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__list {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    @include flex-column(30);
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    font-family: $halvarRg;
+    line-height: 1.33;
+  }
+}

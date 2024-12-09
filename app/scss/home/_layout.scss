@@ -4,7 +4,7 @@
     justify-content: space-between;
     background: rgba($white, .1);
     border-radius: 19px;
-    padding: 30px 60px 25px;
+    padding: 20px 60px 20px;
     border: 1px solid rgba($white, .5);
   }
 
@@ -48,5 +48,6 @@
 
   &__img {
     @include objectCoverBg;
+    margin: -15px;
   }
 }
