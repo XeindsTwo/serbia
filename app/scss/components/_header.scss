@@ -1,6 +1,6 @@
 .header {
   margin-top: 28px;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
   position: relative;
   @media (max-width: 1100px) {
     margin-top: 20px;
@@ -9,52 +9,15 @@
     margin-top: 15px;
   }
 
-  &::before {
-    @include pseudo;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-    max-width: 1190px;
-    width: 100%;
-    margin: 0 auto;
-    height: 140px;
-    border-radius: 1190px;
-    background: rgba(99, 142, 214, 0.46);
-    filter: blur(178px);
-  }
-
   &__inner {
-    position: relative;
-    z-index: 50;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 19px 25px;
-    border-radius: 28px;
-    color: $steel-gray;
-    border: 1px solid #CDCFD6;
-    background-color: $white;
-    @include flex-align-center(0);
-    @media (max-width: 1120px) {
-      padding: 18px 20px;
-    }
-    @include r($tablet) {
-      padding: 17px 17px;
-    }
-    @include r($phone) {
-      padding: 15px;
-    }
-  }
-
-  &__logo {
-    transform: translateY(-3px);
-    @media (max-width: 520px) {
-      width: auto;
-      height: 19px;
-    }
+    display: flex;
+    align-items: center;
+    gap: 30px;
   }
 
   &__nav {
+    margin-left: auto;
+
     @media (max-width: 1100px) {
       display: none;
     }
@@ -68,115 +31,71 @@
   }
 
   &__list {
-    @include flex-align-center(28);
-    margin-left: 24px;
-    @media (max-width: 1240px) {
-      gap: 26px;
-    }
-    @media (max-width: 1100px) {
-      flex-direction: column;
-      align-items: flex-start;
-      margin-left: 0;
-      gap: 34px;
-    }
-    @media (max-width: 380px) {
-      gap: 30px;
-    }
+    @include flex-align-center(22);
   }
 
   &__link {
-    letter-spacing: -0.32px;
+    line-height: 1.4;
     border: 1px solid transparent;
     border-radius: 4px;
-    transition: color .4s, border .4s;
-    @media (max-width: 1100px) {
-      font-size: 20px;
-    }
-    @media (max-width: 580px) {
-      font-size: 18px;
-    }
-    @media (max-width: 380px) {
-      font-size: 17px;
-    }
+    padding: 1px 2px;
+    transition: color .4s, border .4s, opacity .4s;
 
     &:hover {
-      color: $accent;
+      color: #9cb75c;
     }
 
     &:focus {
-      border-color: $accent;
-      color: $accent;
+      border-color: #9cb75c;
+      color: #bcde68;
     }
   }
 
   &__right {
-    @include flex-align-center(15);
-    margin-left: auto;
-    @media (max-width: 1100px) {
-      gap: 25px;
-    }
+    @include flex-align-center(26);
   }
 
   &__phone {
-    font-weight: 400;
+    @include flex-align-center(6);
     border: 1px solid transparent;
     border-radius: 4px;
+    padding: 2px 2px;
     transition: color .4s, border .4s;
-    @include flex-align-center(6);
-    @media (max-width: 450px) {
-      display: none;
-    }
 
     &:hover {
-      color: $accent;
+      color: #badc6b;
 
       svg path {
-        stroke: $accent;
+        stroke: #badc6b;
       }
     }
 
     &:focus {
-      border-color: $accent;
+      border-color: #badc6b;
     }
 
-    &--mobile {
-      display: none;
-      @media (max-width: 450px) {
-        display: flex;
-        margin-bottom: 30px;
-        svg {
-          width: auto;
-          height: 18px;
-        }
-      }
-      @media (max-width: 380px) {
-        font-size: 17px;
-      }
+    svg {
+      width: 20px;
+      height: auto;
     }
   }
 
   &__btn {
-    border-radius: 16px;
-    background-color: $accent;
-    color: $white;
-    padding: 8px 16px;
-    border: 1px solid;
-    transition: color .4s, background-color .4s, border .4s;
-    @media (max-width: 1100px) {
-      display: none;
-      padding: 10px 18px;
-      font-size: 15px;
-    }
+    @include flex-center;
+    padding: 12px 25px;
+    border: 1px solid $white;
+    border-radius: 45px;
+    transition: border .4s, color .4s, background-color .4s;
 
     &:hover {
-      background-color: $deep-navy;
-      border-color: transparent;
+      border-color: #9cb75c;
+      color: #9cb75c;
     }
 
     &:focus {
-      background-color: transparent;
-      border-color: $accent;
-      color: $deep-navy;
+      background-color: $white;
+      color: #161616;
+      border-color: transparent;
     }
   }
 

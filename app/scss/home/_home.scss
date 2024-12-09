@@ -1,0 +1,90 @@
+.home {
+  &__inner {
+    @include bg;
+    display: flex;
+    flex-direction: column;
+    min-height: 575px;
+    background-image: url("../images/bg-home.png");
+    padding: 75px 60px 50px;
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+
+    & > * {
+      position: relative;
+      z-index: 5;
+    }
+  }
+
+  &__country {
+    @include flex-align-center(7);
+    margin-bottom: 22px;
+  }
+
+  &__benefits {
+    @include flex-align-center(12);
+    margin-bottom: 20px;
+  }
+
+  &__benefit {
+    padding: 7px 14px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.45px;
+    line-height: 1;
+    background-color: rgba($white, .1);
+    border: 1px solid rgba($white, .5);
+    border-radius: 52px;
+    backdrop-filter: blur(8.1px);
+  }
+
+  &__title {
+    font-size: 42px;
+    font-family: $halvarBlk;
+    font-weight: 900;
+    max-width: 650px;
+    line-height: 1.1;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    @include flex-center;
+    max-width: max-content;
+    padding: 13px 30px;
+    background-color: $accent;
+    line-height: 1.35;
+    border-radius: 35px;
+    border: 1px solid transparent;
+    transition: background-color .4s, color .4s, border .4s;
+
+    &:hover {
+      background-color: #758551;
+    }
+
+    &:focus {
+      background-color: transparent;
+      border-color: $accent;
+    }
+  }
+
+  &__items {
+    margin-top: auto;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    @include flex-column(5);
+    align-items: center;
+    line-height: 1.3;
+  }
+
+  &__name {
+    font-weight: 600;
+  }
+
+  &__answer {
+    color: rgba($white, .85);
+  }
+}

@@ -78,7 +78,7 @@
   overflow: hidden;
 }
 
-.before-80, .before-60 {
+.before-80, .before-60, .before-75 {
   &::before {
     @include pseudo;
     top: 0;
@@ -90,6 +90,12 @@
   }
 }
 
+.before-75 {
+  &::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.75) 100%);
+  }
+}
+
 .before-60 {
   &::before {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
@@ -97,17 +103,16 @@
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: $light-gray;
+  background-color: rgba($white, .2);
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: $accent;
   border-radius: 50px;
-  border: 2px solid $light-gray;
 }
 
 ::selection {
