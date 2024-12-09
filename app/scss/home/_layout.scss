@@ -1,0 +1,52 @@
+.layout {
+  &__inner {
+    @include flex-align-center(30);
+    justify-content: space-between;
+    background: rgba($white, .1);
+    border-radius: 19px;
+    padding: 30px 60px 25px;
+    border: 1px solid rgba($white, .5);
+  }
+
+  &__title {
+    max-width: 380px;
+    font-size: 24px;
+    line-height: 1.1;
+    font-family: $halvarBlk;
+    margin-bottom: 18px;
+  }
+
+  &__text {
+    line-height: 1.4;
+    font-family: $halvarRg;
+    margin-bottom: 23px;
+    max-width: 570px;
+    color: rgba($white, .7);
+
+    span {
+      color: $white;
+    }
+  }
+
+  &__btn {
+    padding: 12px 32px;
+    border-radius: 55px;
+    background: $accent;
+    color: $white;
+    border: 1px solid transparent;
+    transition: color .4s, background-color .4s, border .4s;
+
+    &:hover {
+      background-color: #758551;
+    }
+
+    &:focus {
+      background-color: transparent;
+      border-color: $accent;
+    }
+  }
+
+  &__img {
+    @include objectCoverBg;
+  }
+}

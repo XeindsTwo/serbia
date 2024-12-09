@@ -10,17 +10,39 @@
     background-color: $accent;
     border-radius: 14px;
     overflow: hidden;
+    position: relative;
     padding: 20px 24px 30px 34px;
 
     & > * {
       position: relative;
       z-index: 5;
     }
+
+    &.three {
+      @include flex-column(0);
+      grid-column: span 2;
+      order: 1;
+      min-height: 275px;
+
+      .steps__description {
+        margin-top: auto;
+      }
+    }
+
+    &.four {
+      @include flex-column(0);
+      grid-row: span 2;
+      padding: 20px 23px 30px;
+
+      .steps__description {
+        margin-top: auto;
+      }
+    }
   }
 
   &__head {
     @include flex-between-center-gap(30);
-    margin-bottom: 55px;
+    margin-bottom: 45px;
   }
 
   &__name {
