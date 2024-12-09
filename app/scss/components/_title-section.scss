@@ -1,26 +1,8 @@
 .title-section {
+  font-family: $halvarBlk;
   font-size: 42px;
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 28px;
   letter-spacing: -0.64px;
-  @include r($tablet) {
-    font-size: 30px;
-    letter-spacing: -.5px;
-  }
-  @include r($sm) {
-    font-size: 28px;
-  }
-  @include r($phone) {
-    font-size: 26px;
-    letter-spacing: 0;
-  }
-
-  span {
-    color: $accent;
-  }
-
-  &.center {
-    text-align: center;
-  }
 }

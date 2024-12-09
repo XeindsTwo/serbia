@@ -1,0 +1,85 @@
+.prices {
+  &__inner {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 34px;
+    justify-content: space-between;
+  }
+
+  &__cards {
+    @include flex-align-center(28);
+    width: 100%;
+  }
+
+  &__card {
+    background-color: rgba($white, .1);
+    border-radius: 14px;
+    border: 0.5px solid rgba($white, .5);
+    padding: 0 27px 50px;
+    max-width: 370px;
+    width: 100%;
+  }
+
+  &__inscription {
+    display: flex;
+    max-width: max-content;
+    line-height: 1.35;
+    font-family: $halvarRg;
+    padding: 4px 30px;
+    border-radius: 50px;
+    background-color: $accent;
+    margin-bottom: 36px;
+    margin-top: -16px;
+  }
+
+  &__name {
+    font-size: 28px;
+    font-weight: 900;
+    font-family: $halvarBlk;
+    margin-left: 4px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    &.top {
+      line-height: 1.2;
+      margin-bottom: 35px;
+    }
+
+    span {
+      font-weight: 700;
+      font-family: $halvarBlk;
+      font-size: 44px;
+
+      &.small {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 350px;
+    margin-top: 36px;
+  }
+
+  &__title {
+    span {
+      position: relative;
+
+      &::before {
+        @include pseudo;
+        bottom: -5px;
+        left: 0;
+        background-image: url("../images/icons/vector-title.svg");
+        width: 107px;
+        height: 14px;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__description {
+    font-family: $halvarRg;
+    font-size: 15px;
+  }
+}
