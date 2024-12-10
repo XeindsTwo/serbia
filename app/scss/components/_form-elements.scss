@@ -4,6 +4,12 @@
   padding: 18px 20px;
   color: #232323;
   width: 100%;
+  @include r($sm) {
+    padding: 16px 18px;
+  }
+  @include r($phone) {
+    font-size: 15px;
+  }
 
   &::placeholder {
     color: rgba(#232323, .5);

@@ -1,8 +1,55 @@
 .steps {
+  &__title {
+    @include r($lg) {
+      max-width: 450px;
+    }
+    @include r($sm) {
+      max-width: 380px;
+    }
+    @include r($phone) {
+      max-width: 340px;
+    }
+  }
+
+  &__svg {
+    display: none;
+    @include r($tablet) {
+      display: block;
+      margin-top: 45px;
+      margin-bottom: 15px;
+    }
+  }
+
   &__list {
     display: grid;
     grid-gap: 28px;
     grid-template-columns: repeat(3, 1fr);
+    @include r($desktop) {
+      grid-gap: 20px;
+    }
+    @include r($lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 860px) {
+      grid-gap: 14px;
+    }
+    @include r($tablet) {
+      display: flex;
+      overflow-y: hidden;
+      position: relative;
+      margin: 0 -18px;
+      will-change: transform;
+      user-select: none;
+      padding: 0 18px 22px;
+
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      &.active {
+        cursor: grabbing;
+      }
+    }
   }
 
   &__card {
@@ -12,6 +59,30 @@
     overflow: hidden;
     position: relative;
     padding: 20px 24px 30px 34px;
+    @include r($desktop) {
+      padding: 20px 20px 24px 22px;
+      min-height: 325px;
+    }
+    @include r($lg) {
+      display: flex;
+      flex-direction: column;
+    }
+    @include r($tablet) {
+      padding: 23px 20px 24px;
+      min-width: 320px;
+    }
+    @media (max-width: 710px) {
+      min-width: 305px;
+    }
+    @include r($sm) {
+      min-height: 390px;
+    }
+    @media (max-width: 530px) {
+      min-width: 295px;
+    }
+    @media (max-width: 385px) {
+      min-width: 280px;
+    }
 
     & > * {
       position: relative;
@@ -23,6 +94,14 @@
       grid-column: span 2;
       order: 1;
       min-height: 275px;
+      @media (max-width: 1100px) {
+        min-height: 250px;
+      }
+      @include r($lg) {
+        grid-column: span 1;
+        min-height: 325px;
+        order: 0;
+      }
 
       .steps__description {
         margin-top: auto;
@@ -33,6 +112,9 @@
       @include flex-column(0);
       grid-row: span 2;
       padding: 20px 23px 30px;
+      @include r($lg) {
+        grid-row: span 1;
+      }
 
       .steps__description {
         margin-top: auto;
@@ -47,7 +129,17 @@
 
   &__name {
     font-size: 40px;
+    line-height: 1;
     font-weight: 700;
+    @include r($desktop) {
+      font-size: 36px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 34px;
+    }
+    @include r($sm) {
+      font-size: 30px;
+    }
   }
 
   &__img {
@@ -59,6 +151,13 @@
   }
 
   &__description {
+    @include r($lg) {
+      margin-top: auto;
+    }
+    @media (max-width: 510px) {
+      font-size: 15px;
+    }
+
     span {
       font-weight: 700;
     }

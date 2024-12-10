@@ -6,10 +6,42 @@
     padding: 48px;
     background-color: $accent;
     border-radius: 24px;
+    @include r($desktop) {
+      padding: 40px 30px;
+    }
+    @media (max-width: 1100px) {
+      border-radius: 20px;
+    }
+    @include r($lg) {
+      margin: 0 -16px;
+      padding: 35px 21px;
+    }
+    @media (max-width: 880px) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+    @media (max-width: 500px) {
+      text-align: left;
+    }
+    @include r($phone) {
+      margin: 0 -12px;
+      padding: 32px 16px;
+      border-radius: 14px;
+    }
   }
 
   &__content {
     max-width: 540px;
+    @include r($desktop) {
+      max-width: 490px;
+    }
+    @media (max-width: 1020px) {
+      max-width: 415px;
+    }
+    @media (max-width: 880px) {
+      max-width: 520px;
+    }
   }
 
   &__title {
@@ -19,10 +51,32 @@
     max-width: 540px;
     line-height: 1.15;
     margin-bottom: 25px;
+    @include r($desktop) {
+      font-size: 32px;
+    }
+    @media (max-width: 1020px) {
+      font-size: 30px;
+    }
+    @media (max-width: 680px) {
+      font-size: 28px;
+    }
+    @media (max-width: 550px) {
+      font-size: 26px;
+      line-height: 1.2;
+    }
+    @media (max-width: 400px) {
+      font-size: 28px;
+    }
   }
 
   &__text {
     font-family: $halvarRg;
+    @include r($tablet) {
+      line-height: 1.5;
+    }
+    @include r($phone) {
+      font-size: 15px;
+    }
   }
 
   &__form {
@@ -42,6 +96,9 @@
     font-weight: 700;
     border-radius: 56px;
     transition: background-color .4s, color .4s, border .4s;
+    @include r($phone) {
+      margin-top: 16px;
+    }
 
     &:hover {
       background-color: #2d2d2d;
@@ -57,10 +114,12 @@
   &__agree {
     @include flex-align-center(10);
     font-size: 13px;
+    line-height: 1.4;
 
     &-figure {
       cursor: pointer;
       width: 56px;
+      flex-shrink: 0;
       border: 1px solid rgba(#000, 12.5%);
       border-radius: 20px;
       padding: 2px;
@@ -94,21 +153,36 @@
       transition: border .4s, background-color .4s, transform .4s;
     }
 
-    a {
-      margin-top: 2px;
-      margin-left: -5px;
-      padding-bottom: 1px;
-      border: 1px solid transparent;
-      border-radius: 2px;
-      transition: color .4s, border .4s;
-
-      &:hover {
-        color: #f6e046;
-        border-bottom-color: #f6e046;
+    p {
+      @include flex-align-center(5);
+      @media (max-width: 425px) {
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+      @media (max-width: 395px) {
+        gap: 2px;
       }
 
-      &:focus {
-        border-color: #f6e046;
+      a {
+        display: flex;
+        margin-top: 1px;
+        padding-bottom: 1px;
+        border: 1px solid transparent;
+        border-bottom-color: $white;
+        border-radius: 2px;
+        transition: color .4s, border .4s;
+        @media (max-width: 395px) {
+          margin-top: 0;
+        }
+
+        &:hover {
+          color: #f6e046;
+          border-bottom-color: #f6e046;
+        }
+
+        &:focus {
+          border-color: #f6e046;
+        }
       }
     }
   }
