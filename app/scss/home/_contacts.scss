@@ -12,6 +12,56 @@
     border: 1px solid rgba($white, .5);
     background-color: rgba($white, .1);
     padding: 35px 24px 30px;
+
+    &.transparent {
+      @include flex-column(15);
+      border-radius: 0;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+
+  &__callback {
+    position: relative;
+    display: flex;
+    border-radius: 14px;
+    background-color: $accent;
+    padding: 17px 24px;
+    border: 1px solid transparent;
+    transition: color .4s, border .4s, background-color .4s;
+
+    &:hover {
+      background-color: #849b4f;
+
+      svg {
+        transform: translate(6px, -1px);
+      }
+    }
+
+    &:focus {
+      border-color: #9cb75c;
+      background-color: transparent;
+    }
+
+    svg {
+      position: absolute;
+      right: 19px;
+      top: 18px;
+    }
+  }
+
+  &__social {
+    font-family: $halvarRg;
+    line-height: 1;
+    display: flex;
+    padding: 27px 25px;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+    border-radius: 14px;
+    background-color: rgba($white, .1);
+    border: 1px solid rgba($white, .6);
   }
 
   &__subtitle {
@@ -133,6 +183,22 @@
     font-family: $halvarRg;
     font-size: 15px;
     line-height: 1.5;
+  }
+
+  &__more {
+    @include flex-align-center(9);
+    font-family: $halvarRg;
+    font-size: 14px;
+    line-height: 1;
+    color: rgba($white, .6);
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    transition: color .4s;
+
+    svg {
+
+    }
   }
 
   &__link {
