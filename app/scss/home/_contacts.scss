@@ -93,10 +93,6 @@
       }
 
       &:hover {
-        background: rgba($white, .15);
-      }
-
-      &:focus {
         border-color: transparent;
 
         .contacts__more {
@@ -111,6 +107,10 @@
           opacity: 0.9;
         }
       }
+
+      &:focus {
+        background: transparent;
+      }
     }
 
     &.mail {
@@ -119,10 +119,6 @@
       }
 
       &:hover {
-        background: rgba($white, .15);
-      }
-
-      &:focus {
         border-color: transparent;
 
         .contacts__more {
@@ -137,6 +133,10 @@
           border-color: transparent;
           opacity: 0.8;
         }
+      }
+
+      &:focus {
+        background: transparent;
       }
     }
   }
