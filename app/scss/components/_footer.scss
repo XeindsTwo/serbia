@@ -1,3 +1,54 @@
 .footer {
+  padding-bottom: 26px;
 
+  &__inner {
+    @include flex-align-center(50);
+  }
+
+  &__info {
+    @include flex-align-center(23);
+    font-size: 15px;
+  }
+
+  &__copy {
+    color: rgba($white, .5);
+  }
+
+  &__link {
+    color: rgba($white, .7);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 1px 2px;
+    transition: color .4s, border .4s;
+
+    &:hover {
+      color: $white;
+    }
+
+    &:focus {
+      border-color: #badc6b;
+      color: $white;
+    }
+  }
+
+  &__top {
+    @include flex-align-center(5);
+    margin-left: auto;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding-right: 2px;
+    transition: color .4s, border .4s;
+
+    &:hover {
+      color: #badc6b;
+
+      svg {
+        transform: translateY(-3px);
+      }
+    }
+
+    &:focus {
+      border-color: #badc6b;
+    }
+  }
 }

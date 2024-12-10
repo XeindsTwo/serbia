@@ -4,7 +4,7 @@ import {setupMobileMenu} from './mobileMenu.js';
 bindScrollToLinks();
 setupMobileMenu();
 
-document.querySelectorAll('.contacts__agree-figure').forEach((figure) => {
+document.querySelectorAll('.form__agree-figure').forEach((figure) => {
   figure.addEventListener('click', () => {
     if (figure.classList.contains('active')) {
       figure.classList.remove('active');
