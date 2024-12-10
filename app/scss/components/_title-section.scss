@@ -5,4 +5,23 @@
   line-height: 1.1;
   margin-bottom: 28px;
   letter-spacing: -0.64px;
+  @include r($desktop) {
+    font-size: 40px;
+  }
+  @include r($lg) {
+    font-size: 38px;
+    letter-spacing: 0;
+  }
+  @include r($tablet) {
+    font-size: 36px;
+  }
+  @include r($sm) {
+    font-size: 32px;
+  }
+  @include r($phone) {
+    line-height: 1.2;
+  }
+  @media (max-width: 380px) {
+    font-size: 30px;
+  }
 }

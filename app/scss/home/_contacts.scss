@@ -1,10 +1,26 @@
 .contacts {
   margin-bottom: 110px;
+  @media (max-width: 1100px) {
+    margin-bottom: 90px;
+  }
+  @include r($lg) {
+    margin-bottom: 80px;
+  }
+  @media (max-width: 810px) {
+    margin-bottom: 70px;
+  }
 
   &__items {
     display: grid;
     grid-gap: 22px;
     grid-template-columns: repeat(3, 1fr);
+    @include r($desktop) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include r($tablet) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 16px;
+    }
   }
 
   &__item {
@@ -12,6 +28,39 @@
     border: 1px solid rgba($white, .5);
     background-color: rgba($white, .1);
     padding: 27px 24px 32px;
+    @media (max-width: 560px) {
+      padding: 24px 22px 28px;
+    }
+    @media (max-width: 400px) {
+      padding: 24px 19px 28px;
+    }
+
+    &:first-child {
+      @include r($desktop) {
+        order: -1;
+      }
+    }
+
+    &:nth-child(2) {
+      @include r($desktop) {
+        order: 2;
+        grid-column: span 2;
+      }
+      @include r($tablet) {
+        grid-column: span 1;
+      }
+    }
+
+    &:nth-child(3) {
+      @include r($desktop) {
+        display: flex;
+        flex-direction: column;
+      }
+      @include r($tablet) {
+        background-color: rgba(#33a9dc, .15);
+        border: transparent;
+      }
+    }
 
     &.transparent {
       display: grid;
@@ -32,6 +81,9 @@
     padding: 20px 24px;
     border: 1px solid transparent;
     transition: color .4s, border .4s, background-color .4s;
+    @include r($tablet) {
+      display: none;
+    }
 
     &:hover {
       background-color: #849b4f;
@@ -44,6 +96,15 @@
     &:focus {
       border-color: #9cb75c;
       background-color: transparent;
+    }
+
+    &.mobile {
+      display: none;
+      @include r($tablet) {
+        display: flex;
+        padding: 18px 20px;
+        margin-bottom: 16px;
+      }
     }
 
     svg {
@@ -66,6 +127,17 @@
     background-color: rgba($white, .1);
     border: 1px solid rgba($white, .6);
     transition: background .4s, border .4s;
+    @include r($tablet) {
+      gap: 15px;
+      padding: 26px 24px;
+    }
+    @media (max-width: 560px) {
+      padding: 29px 22px;
+    }
+    @media (max-width: 410px) {
+      font-size: 15px;
+      padding: 28px 20px;
+    }
 
     & > * {
       position: relative;
@@ -84,11 +156,18 @@
     }
 
     &.instagram {
+      svg:nth-child(2) {
+        @media (max-width: 560px) {
+          width: auto;
+          height: 47px;
+        }
+      }
+
       &::before {
         background: #833ab4;
         background: linear-gradient(
-                to right,
-                rgba(131, 58, 180, 0.37), rgba(253, 29, 29, 0.78), #fcb045
+                        to right,
+                        rgba(131, 58, 180, 0.37), rgba(253, 29, 29, 0.78), #fcb045
         );
       }
 
@@ -115,7 +194,7 @@
 
     &.mail {
       &::before {
-        background:linear-gradient(-120deg, #4285f4, #34a853, rgba(251, 188, 5, 0.85), rgba(234, 67, 53, 0.81));
+        background: linear-gradient(-120deg, #4285f4, #34a853, rgba(251, 188, 5, 0.85), rgba(234, 67, 53, 0.81));
       }
 
       &:hover {
@@ -138,6 +217,19 @@
       &:focus {
         background: transparent;
       }
+
+      svg {
+        &:nth-child(2) {
+          @include r($desktop) {
+            width: 48px;
+            margin-left: 2px;
+            height: auto;
+          }
+          @media (max-width: 560px) {
+            width: 44px;
+          }
+        }
+      }
     }
   }
 
@@ -146,11 +238,32 @@
     font-family: $halvarRg;
     line-height: 1.2;
     font-weight: 700;
+    @include r($desktop) {
+      font-size: 26px;
+    }
+    @include r($lg) {
+      font-size: 24px;
+    }
+    @media (max-width: 960px) {
+      font-size: 23px;
+    }
+    @include r($tablet) {
+      font-size: 24px;
+    }
+    @media (max-width: 500px) {
+      font-size: 22px;
+    }
   }
 
   &__phones {
     @include flex-column(12);
     margin-top: 20px;
+    @include r($desktop) {
+      margin-top: 30px;
+    }
+    @include r($tablet) {
+      margin-top: 25px;
+    }
   }
 
   &__phone {
@@ -163,6 +276,9 @@
     line-height: 1;
     border: 1px solid transparent;
     transition: color .4s, border .4s, background-color .4s;
+    @media (max-width: 900px) {
+      font-size: 15px;
+    }
 
     &.whatsapp {
       &:hover {
@@ -246,12 +362,30 @@
     @include flex-align-center(30);
     justify-content: space-between;
     margin-bottom: 14px;
+    @include r($desktop) {
+      margin-bottom: 30px;
+    }
+    @include r($phone) {
+      margin-bottom: 20px;
+    }
 
     p {
       font-family: $halvarRg;
       font-size: 15px;
       color: rgba($white, .7);
       margin-top: -10px;
+    }
+
+    img {
+      @include objectCoverBg;
+      @include r($desktop) {
+        width: 56px;
+        height: 56px;
+      }
+      @include r($phone) {
+        width: 52px;
+        height: auto;
+      }
     }
   }
 
@@ -260,6 +394,9 @@
     font-family: $halvarRg;
     font-size: 15px;
     line-height: 1.5;
+    @include r($tablet) {
+      margin-bottom: 26px;
+    }
   }
 
   &__more {
@@ -273,6 +410,27 @@
     top: 13px;
     right: 13px;
     transition: color .4s;
+    @include r($desktop) {
+      font-size: 16px;
+      gap: 12px;
+    }
+    @include r($tablet) {
+      top: 17px;
+      right: 22px;
+    }
+    @include r($sm) {
+      font-size: 15px;
+    }
+    @media (max-width: 560px) {
+      font-size: 14px;
+      top: 14px;
+      right: 20px;
+    }
+    @include r($phone) {
+      font-size: 13px;
+      top: 12px;
+      right: 18px;
+    }
   }
 
   &__link {
@@ -285,6 +443,10 @@
     border-radius: 50px;
     border: 1px solid transparent;
     transition: color .4s, background-color .4s, border .4s;
+    @include r($desktop) {
+      margin-top: auto;
+      padding: 18px 30px;
+    }
 
     &:hover {
       background-color: #33a9dc;
