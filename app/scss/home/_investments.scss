@@ -5,10 +5,21 @@
     @include flex-align-center(34);
     align-items: flex-start;
     margin-bottom: 38px;
+    @media (max-width: 1070px) {
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
   }
 
   &__content {
     max-width: 370px;
+    @media (max-width: 1070px) {
+      max-width: 410px;
+    }
+    @media (max-width: 800px) {
+      max-width: 390px;
+    }
   }
 
   &__description {
@@ -18,9 +29,37 @@
   &__items {
     @include flex-align-center(45);
     margin-bottom: 32px;
+    @media (max-width: 1070px) {
+      gap: 30px;
+    }
+    @media (max-width: 800px) {
+      gap: 24px;
+    }
 
     li {
       @include flex-column(17);
+    }
+  }
+
+  &__icon {
+    @include r($lg) {
+      width: 66px;
+      height: 66px;
+    }
+    @media (max-width: 395px) {
+      width: 62px;
+      height: 62px;
+    }
+
+    &.big {
+      @include r($lg) {
+        width: 62px;
+        height: 62px;
+      }
+      @media (max-width: 395px) {
+        width: 58px;
+        height: 58px;
+      }
     }
   }
 
@@ -41,6 +80,15 @@
     padding: 18px 25px;
     position: relative;
     height: 100%;
+    @media (max-width: 1070px) {
+      min-height: 290px;
+    }
+    @include r($tablet) {
+      padding: 16px 18px;
+    }
+    @include r($phone) {
+      padding: 15px 14px;
+    }
 
     & > * {
       position: relative;
@@ -50,6 +98,9 @@
 
   &__text {
     margin-top: auto;
+    @media (max-width: 1070px) {
+      max-width: 470px;
+    }
   }
 
   &__inscription {
@@ -62,16 +113,44 @@
     line-height: 1.35;
     border-radius: 56px;
     background-color: $accent;
+    @media (max-width: 800px) {
+      padding: 4px 18px;
+    }
+    @include r($sm) {
+      right: 25px;
+    }
+    @include r($phone) {
+      padding: 4px 15px;
+    }
+    @media (max-width: 420px) {
+      padding: 4px 13px;
+      right: 20px;
+    }
   }
 
   &__bottom {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
+    @media (max-width: 1070px) {
+      grid-gap: 45px;
+      margin: 0 12px;
+    }
+    @include r($tablet) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 35px;
+    }
+    @include r($phone) {
+      margin: 0 9px;
+    }
 
     span {
       position: relative;
       font-weight: 900;
+      @include r($tablet) {
+        display: block;
+        max-width: max-content;
+      }
 
       &::before {
         @include bg;
@@ -82,6 +161,10 @@
         height: 22px;
         z-index: -1;
         background-image: url("../images/icons/vector-invest.svg");
+        @include r($tablet) {
+          top: 2px;
+          height: 23px;
+        }
       }
 
       &.two {
@@ -89,6 +172,9 @@
           background-image: url("../images/icons/vector-invest-two.svg");
           height: 28px;
           top: -3px;
+          @include r($tablet) {
+            top: -1px;
+          }
         }
       }
     }

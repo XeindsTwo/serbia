@@ -60,9 +60,6 @@
   @include r($tablet) {
     margin-bottom: 80px;
   }
-  @include r($phone) {
-    margin-bottom: 70px;
-  }
 }
 
 .sr-only {
