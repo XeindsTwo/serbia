@@ -1,4 +1,10 @@
 .home {
+  &.indent {
+    @media (max-width: 960px) {
+      margin-bottom: 60px;
+    }
+  }
+
   &__inner {
     @include bg;
     display: flex;

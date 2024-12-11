@@ -8,6 +8,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
+    @media (max-width: 960px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   &__svetogorska {
@@ -21,8 +25,17 @@
     @media (max-width: 1100px) {
       font-size: 38px;
     }
+    @media (max-width: 960px) {
+      margin-bottom: 24px;
+    }
     @media (max-width: 950px) {
       font-size: 36px;
+    }
+    @media (max-width: 400px) {
+      font-size: 34px;
+    }
+    @media (max-width: 380px) {
+      font-size: 32px;
     }
   }
 
@@ -32,6 +45,9 @@
     max-width: 520px;
     color: rgba($white, .8);
     margin-bottom: 30px;
+    @media (max-width: 960px) {
+      margin-bottom: 20px;
+    }
 
     span {
       color: $white;
@@ -60,14 +76,37 @@
     @include r($lg) {
       border-radius: 20px;
     }
-    @media (max-width: 900px) {
+    @media (max-width: 960px) {
       min-height: 320px;
-      padding: 25px 18px;
+      padding: 20px 20px;
+    }
+    @include r($phone) {
+      min-height: 300px;
+      padding: 16px 17px;
     }
 
     & > * {
       position: relative;
       z-index: 5;
+    }
+
+    &.one {
+      @media (max-width: 960px) {
+        display: none;
+      }
+    }
+
+    &.mobile {
+      display: none;
+      @media (max-width: 960px) {
+        display: flex;
+        margin-bottom: 26px;
+        min-height: 300px;
+        padding: 20px 20px;
+      }
+      @include r($phone) {
+        padding: 16px 17px;
+      }
     }
   }
 
@@ -98,6 +137,16 @@
     @include r($lg) {
       font-size: 20px;
     }
+    @media (max-width: 960px) {
+      bottom: auto;
+      top: 23px;
+    }
+    @include r($phone) {
+      font-size: 18px;
+      padding: 5px 25px;
+      padding-right: 16px;
+      right: -9px;
+    }
 
     span {
       font-weight: 700;
@@ -110,6 +159,22 @@
     grid-template-columns: repeat(3, 1fr);
     @media (max-width: 1100px) {
       grid-gap: 20px 15px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 960px) {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 700px;
+      margin: 10px auto 0;
+    }
+    @media (max-width: 530px) {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 390px;
+      grid-gap: 30px 15px;
+      transform: translateX(-10px);
+    }
+    @media (max-width: 385px) {
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -128,10 +193,34 @@
     @include r($lg) {
       gap: 25px;
     }
+    @include r($sm) {
+      font-size: 14px;
+    }
+    @media (max-width: 530px) {
+      max-width: 160px;
+      gap: 20px;
+    }
 
     &:last-child {
       @media (max-width: 1100px) {
         grid-column: span 2;
+      }
+      @media (max-width: 960px) {
+        grid-column: span 1;
+      }
+      @media (max-width: 385px) {
+        grid-column: span 2;
+      }
+    }
+
+    img {
+      @media (max-width: 960px) {
+        width: 68px;
+        height: 68px;
+      }
+      @include r($sm) {
+        width: 63px;
+        height: 63px;
       }
     }
   }
