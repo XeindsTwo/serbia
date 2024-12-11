@@ -231,6 +231,47 @@
         }
       }
     }
+
+    &.vk {
+      &:hover {
+        border-color: transparent;
+        background-color: #0077FF;
+
+        .contacts__vk path {
+          &:first-child {
+            fill: $white;
+          }
+
+          &:last-child {
+            fill: #0077FF;
+          }
+        }
+
+        .contacts__more {
+          color: $white;
+
+          svg {
+            transform: translate(3px, -2px);
+          }
+        }
+      }
+
+      svg {
+        &:nth-child(2) {
+          width: 52px;
+          height: 52px;
+
+          @include r($desktop) {
+            width: 48px;
+            margin-left: 2px;
+            height: auto;
+          }
+          @media (max-width: 560px) {
+            width: 44px;
+          }
+        }
+      }
+    }
   }
 
   &__subtitle {

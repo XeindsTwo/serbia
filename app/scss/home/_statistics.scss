@@ -6,6 +6,15 @@
   @include r($desktop) {
     padding: 45px 0 50px;
   }
+  @include r($lg) {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 4px 70px;
+  }
+  @include r($phone) {
+    padding: 35px 0 40px;
+    margin: 0 0 70px;
+  }
 
   &::before {
     @include pseudo;
@@ -16,16 +25,37 @@
     background-color: rgba(#000, .48);
   }
 
+  .title-section {
+    br {
+      display: none;
+      @include r($sm) {
+        display: block;
+      }
+    }
+  }
+
   &__list {
     margin-top: 65px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 45px;
+    @include r($lg) {
+      margin-top: 55px;
+    }
+    @include r($tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include r($sm) {
+      grid-gap: 35px 30px;
+    }
+    @media (max-width: 410px) {
+      margin-top: 45px;
+    }
   }
 
   &__number {
     font-size: 32px;
-    line-height: 1;
+    line-height: 1.15;
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 16px;
@@ -33,10 +63,23 @@
     @media (max-width: 1100px) {
       font-size: 28px;
     }
+    @media (max-width: 920px) {
+      font-size: 26px;
+    }
+    @media (max-width: 410px) {
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+    @media (max-width: 400px) {
+      max-width: 120px;
+    }
   }
 
   &__text {
     font-size: 14px;
     max-width: 340px;
+    @media (max-width: 400px) {
+      font-size: 13px;
+    }
   }
 }
