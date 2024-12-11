@@ -1,30 +1,46 @@
 .header {
-  margin-top: 28px;
-  margin-bottom: 26px;
+  padding: 28px 0 26px;
   position: relative;
-  @media (max-width: 1100px) {
-    margin-top: 20px;
+  z-index: 40;
+  background-color: #141414;
+  @include r($desktop) {
+    padding-top: 22px;
+  }
+  @media (max-width: 1130px) {
+    padding-bottom: 34px;
   }
   @include r($tablet) {
-    margin-top: 15px;
+    padding: 26px 0 28px;
   }
 
   &__inner {
+    position: relative;
+    z-index: 50;
     display: flex;
     align-items: center;
     gap: 30px;
+    @media (max-width: 1130px) {
+      gap: 20px;
+    }
+  }
+
+  img {
+    @media (max-width: 1130px) {
+      width: 94px;
+      height: auto;
+    }
   }
 
   &__nav {
     margin-left: auto;
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1130px) {
       display: none;
     }
 
     &.mobile {
       display: none;
-      @media (max-width: 1100px) {
+      @media (max-width: 1130px) {
         display: block;
       }
     }
@@ -32,6 +48,11 @@
 
   &__list {
     @include flex-align-center(22);
+    @media (max-width: 1130px) {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 34px;
+    }
   }
 
   &__link {
@@ -40,6 +61,13 @@
     border-radius: 4px;
     padding: 1px 2px;
     transition: color .4s, border .4s, opacity .4s;
+    @media (max-width: 1130px) {
+      font-size: 18px;
+      padding: 2px 3px;
+    }
+    @include r($tablet) {
+      font-size: 17px;
+    }
 
     &:hover {
       color: #9cb75c;
@@ -53,6 +81,9 @@
 
   &__right {
     @include flex-align-center(26);
+    @media (max-width: 1130px) {
+      margin-left: auto;
+    }
   }
 
   &__phone {
@@ -61,6 +92,9 @@
     border-radius: 4px;
     padding: 2px 2px;
     transition: color .4s, border .4s;
+    @include r($tablet) {
+      display: none;
+    }
 
     &:hover {
       color: #badc6b;
@@ -78,6 +112,15 @@
       width: 20px;
       height: auto;
     }
+
+    &.mobile-adaptive {
+      display: none;
+      @include r($tablet) {
+        display: flex;
+        margin-left: auto;
+        margin-bottom: 10px;
+      }
+    }
   }
 
   &__btn {
@@ -86,6 +129,17 @@
     border: 1px solid $white;
     border-radius: 45px;
     transition: border .4s, color .4s, background-color .4s;
+    @media (max-width: 1130px) {
+      padding: 9px 22px;
+    }
+    @include r($tablet) {
+      font-size: 15px;
+      padding: 8px 20px;
+    }
+    @media (max-width: 530px) {
+      display: none;
+      font-size: 16px;
+    }
 
     &:hover {
       border-color: #9cb75c;
@@ -97,11 +151,19 @@
       color: #161616;
       border-color: transparent;
     }
+
+    &.mobile-adaptive {
+      display: none;
+      @media (max-width: 530px) {
+        display: flex;
+        margin-left: auto;
+      }
+    }
   }
 
   &__mobile {
     @include flex-column(30);
-    padding: 135px 45px 30px;
+    padding: 120px 25px 30px;
     display: none;
     pointer-events: none;
     user-select: none;
@@ -109,38 +171,32 @@
     z-index: 25;
     top: 0;
     left: 0;
-    width: 100%;
-    background-color: $white300;
-    transform: translateX(100%);
+    width: 40%;
+    background-color: #141414;
+    transform: translateX(300%);
     height: 100vh;
-    transition: transform .7s ease-in-out;
-    @media (max-width: 1100px) {
+    transition: transform .8s ease-in-out;
+    @media (max-width: 1130px) {
       display: flex;
       align-items: flex-start;
       pointer-events: auto;
       user-select: auto;
     }
     @include r($lg) {
-      padding: 135px 40px 30px;
+      transform: translateX(270%);
     }
-    @media (max-width: 870px) {
-      padding: 135px 35px 30px;
+    @media (max-width: 900px) {
+      width: 52%;
     }
     @include r($tablet) {
-      padding: 135px 35px 30px;
+      padding-top: 110px;
     }
     @include r($sm) {
-      padding: 135px 35px 30px;
-    }
-    @include r($phone) {
-      padding: 135px 20px 30px;
-    }
-    @media (max-width: 450px) {
-      padding-top: 125px;
+      width: 100%;
     }
 
     &.active {
-      transform: translateX(0);
+      transform: translateX(calc(100vw - 100%));
     }
   }
 }
