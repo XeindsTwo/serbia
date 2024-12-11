@@ -3,6 +3,9 @@
   position: relative;
   padding: 55px 0 60px;
   background-image: url("../images/background-serbia.webp");
+  @include r($desktop) {
+    padding: 45px 0 50px;
+  }
 
   &::before {
     @include pseudo;
@@ -27,6 +30,9 @@
     text-transform: uppercase;
     margin-bottom: 16px;
     display: block;
+    @media (max-width: 1100px) {
+      font-size: 28px;
+    }
   }
 
   &__text {
