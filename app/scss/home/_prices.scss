@@ -1,16 +1,43 @@
 .prices {
   margin-bottom: 45px;
+  @include r($sm) {
+    margin-bottom: 65px;
+  }
+
+  &__title {
+    @media (max-width: 410px) {
+
+    }
+  }
 
   &__inner {
     display: flex;
     flex-direction: row-reverse;
     gap: 34px;
     justify-content: space-between;
+    @media (max-width: 1070px) {
+      flex-direction: column;
+      gap: 55px;
+    }
+    @media (max-width: 410px) {
+      gap: 45px;
+    }
   }
 
   &__cards {
     @include flex-align-center(28);
     width: 100%;
+    @include r($desktop) {
+      gap: 16px;
+    }
+    @media (max-width: 1070px) {
+      align-items: stretch;
+    }
+    @include r($sm) {
+      flex-direction: column;
+      align-items: center;
+      gap: 42px;
+    }
   }
 
   &__card {
@@ -20,6 +47,21 @@
     padding: 0 27px 50px;
     max-width: 370px;
     width: 100%;
+    @media (max-width: 1120px) {
+      padding: 0 24px 35px;
+    }
+    @media (max-width: 1070px) {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+    }
+    @media (max-width: 700px) {
+      padding: 0 22px 25px;
+    }
+    @include r($sm) {
+      text-align: center;
+      max-width: 395px;
+    }
   }
 
   &__inscription {
@@ -32,6 +74,9 @@
     background-color: $accent;
     margin-bottom: 36px;
     margin-top: -16px;
+    @include r($sm) {
+      margin: -16px auto 30px;
+    }
   }
 
   &__name {
@@ -40,9 +85,19 @@
     font-family: $halvarBlk;
     margin-left: 4px;
     margin-bottom: 30px;
+    @media (max-width: 700px) {
+      font-size: 26px;
+      margin-left: 0;
+    }
+    @media (max-width: 660px) {
+      font-size: 24px;
+      line-height: 1.2;
+    }
   }
 
   &__text {
+    margin-bottom: 35px;
+
     &.top {
       line-height: 1.2;
       margin-bottom: 35px;
@@ -52,16 +107,49 @@
       font-weight: 700;
       font-family: $halvarBlk;
       font-size: 44px;
+      @media (max-width: 1070px) {
+        font-size: 40px;
+      }
+      @media (max-width: 860px) {
+        font-size: 38px;
+      }
+      @media (max-width: 680px) {
+        font-size: 36px;
+      }
+      @media (max-width: 390px) {
+        font-size: 34px;
+      }
 
       &.small {
         font-size: 20px;
+        @media (max-width: 1160px) {
+          font-size: 18px;
+        }
       }
+    }
+  }
+
+  &__signature {
+    @media (max-width: 700px) {
+      margin-top: auto;
     }
   }
 
   &__content {
     max-width: 350px;
     margin-top: 36px;
+    @include r($desktop) {
+      max-width: 330px;
+      margin-top: 24px;
+    }
+    @media (max-width: 1120px) {
+      margin-top: 0;
+    }
+    @media (max-width: 1070px) {
+      margin: 0 auto;
+      text-align: center;
+      max-width: 460px;
+    }
   }
 
   &__title {
@@ -76,6 +164,15 @@
         width: 107px;
         height: 14px;
         z-index: -1;
+        @include r($desktop) {
+          width: 100px;
+        }
+        @include r($lg) {
+          width: 110%;
+        }
+        @include r($sm) {
+          bottom: -6px;
+        }
       }
     }
   }
