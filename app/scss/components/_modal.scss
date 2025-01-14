@@ -1,0 +1,89 @@
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: #141414;
+  border-radius: 14px;
+  max-width: 520px;
+  width: 100%;
+  font-family: $halvarRg;
+  padding: 50px 30px 40px;
+  z-index: 120;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(50%);
+  transition: opacity .5s, transform .7s, visibility .4s;
+
+  &.active {
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__close {
+    @include flex-center;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: background-color .4s, transform .4s, border .4s;
+
+    &:hover {
+      transform: rotate(180deg);
+
+      svg path {
+        stroke: #badc6b;
+      }
+    }
+
+    &:focus {
+      border-color: #badc6b;
+
+      svg path {
+        stroke: $white;
+      }
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 1.2;
+    max-width: 390px;
+    margin: 10px auto 30px;
+    text-align: center;
+  }
+
+  &__btn {
+    @include flex-center;
+    font-family: $golos;
+    background-color: $accent;
+    border-radius: 56px;
+    padding: 12px;
+    color: $white;
+    max-width: 250px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    transition: color .4s, background-color .4s, border .4s;
+
+    &:hover {
+      background-color: $white;
+      color: #141414;
+      border-color: transparent;
+    }
+
+    &:focus {
+      background-color: transparent;
+      border-color: #badc6b;
+      color: $white;
+    }
+  }
+}

@@ -43,3 +43,81 @@ slider.addEventListener('mousemove', (e) => {
   const walk = (x - startX);
   slider.scrollLeft = scrollLeft - walk;
 });
+
+document.querySelector('.form__form').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const formData = new FormData(this);
+
+  fetch('php/form.php', {
+    method: 'POST',
+    body: formData
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Сетевая ошибка');
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (data.success) {
+        document.cookie = "redirected=true; path=/; max-age=3600";
+        window.location.href = '/thanks';
+      } else {
+        document.getElementById('responseMessage').innerText = 'Произошла ошибка при отправке заявки.';
+      }
+    })
+    .catch(error => {
+      document.getElementById('responseMessage').innerText = 'Произошла ошибка: ' + error.message;
+    });
+});
+
+const modal = document.querySelector('.modal');
+modal.addEventListener('click', function (event) {
+  if (
+    event.target.classList.contains('modal__close') ||
+    event.target.classList.contains('modal__btn')
+  ) {
+    closeModal(modal);
+  }
+});
+
+document.addEventListener('keydown', function handleEsc(event) {
+  if (event.key === 'Escape') {
+    closeModal(modal);
+  }
+});
+
+function closeModal(modal) {
+  modal.classList.remove('active');
+  document.body.classList.remove('active');
+  document.documentElement.classList.remove('active');
+
+  const focusableElements = document.querySelectorAll('[tabindex]');
+  focusableElements.forEach(element => {
+    element.removeAttribute('tabindex');
+  });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const button = document.querySelector('.info__btn');
+  const list = document.querySelector('.info__list');
+
+  const randomTime = Math.random() * (15000 - 10000) + 10000;
+
+  setTimeout(() => {
+    button.classList.add('active');
+  }, randomTime);
+
+  button.addEventListener('click', () => {
+    if (button.classList.contains('active')) {
+      list.classList.toggle('active');
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!list.contains(event.target) && !button.contains(event.target)) {
+      list.classList.remove('active');
+    }
+  });
+});

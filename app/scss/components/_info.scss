@@ -1,0 +1,117 @@
+.info {
+  &__btn {
+    @include flex-center;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    z-index: 50;
+    bottom: 40px;
+    right: 2.3%;
+    background-color: rgba($white, .1);
+    border: 1px solid rgba($white, .5);
+    backdrop-filter: blur(8.14px);
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: background-color .4s, border .4s, opacity .4s, tranform .4s, visibility .4s;
+    @include r($lg) {
+      width: 60px;
+      height: 60px;
+
+      svg {
+        width: auto;
+        height: 32px;
+      }
+    }
+    @media (max-width: 900px) {
+      background-color: rgba($black, .2);
+    }
+    @include r($tablet) {
+      bottom: 30px;
+      right: 20px;
+    }
+    @include r($phone) {
+      width: 55px;
+      height: 55px;
+
+      svg {
+        height: 29px;
+      }
+    }
+
+    &:hover {
+      background-color: transparent;
+      border-color: $accent;
+    }
+
+    &:focus {
+      background-color: $accent;
+      border-color: transparent;
+    }
+
+    &.active {
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__list {
+    @include flex-column(20);
+    align-items: flex-end;
+    max-width: 285px;
+    width: 100%;
+    border-radius: 14px;
+    background-color: rgba($white, .1);
+    backdrop-filter: blur(8.15px);
+    border: 1px solid rgba($white, .5);
+    padding: 15px 14px;
+    font-family: $halvarRg;
+    position: fixed;
+    z-index: 60;
+    bottom: 140px;
+    right: 2.3%;
+    opacity: 0;
+    transform: translateY(30px);
+    visibility: hidden;
+    transition: transform .4s, visibility .4s, opacity .4s;
+    @include r($desktop) {
+      max-width: 275px;
+    }
+    @include r($lg) {
+      bottom: 130px;
+    }
+    @include r($tablet) {
+      font-size: 15px;
+      bottom: 120px;
+      right: 20px;
+      background-color: rgba($black, .2);
+    }
+    @include r($phone) {
+      bottom: 110px;
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &__link {
+    @include flex-align-center(13);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 1px 4px;
+    transition: color .4s, opacity .4s, border .4s;
+
+    &:hover {
+      color: #badc6b;
+    }
+
+    &:focus {
+      border-color: #badc6b;
+    }
+  }
+}

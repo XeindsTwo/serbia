@@ -70,6 +70,8 @@
   }
 
   &__btn {
+    display: flex;
+    max-width: max-content;
     padding: 12px 32px;
     border-radius: 55px;
     background: $accent;

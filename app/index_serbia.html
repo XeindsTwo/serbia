@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html class="html" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta http-equiv="content-type" content="public, max-age=3600">
+  <meta name="theme-color" content="#fff">
+  <title>Svetogorska</title>
+  <link rel="shortcut icon" href="images/icons/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="body">
+
+<header class="header" id="header">
+  <div class="container">
+    <div class="header__inner">
+      <img src="images/logo.svg" width="75" height="34" alt="логотип">
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li>
+            <a class="header__link desktop" href="#about">O projektu</a>
+          </li>
+          <li>
+            <a class="header__link desktop" href="#investments">Investicije</a>
+          </li>
+          <li>
+            <a class="header__link desktop" href="#buy">Kupovina</a>
+          </li>
+          <li>
+            <a class="header__link desktop" href="#contacts">Kontakti</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <a class="header__phone" href="tel:+74992262615">
+          <span class="sr-only">Открыть номер телефона</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+            <path
+                d="M6.70646 3.5441L7.13913 4.31939C7.5296 5.01904 7.37285 5.93687 6.75787 6.55185C6.75787 6.55186 6.75787 6.55186 6.75787 6.55186C6.75776 6.55197 6.01201 7.29792 7.36441 8.65031C8.71617 10.0021 9.46208 9.25763 9.46286 9.25685C9.46288 9.25683 9.46287 9.25684 9.4629 9.25682C10.0779 8.64186 10.9957 8.48513 11.6953 8.87559L12.4706 9.30826C13.5271 9.89787 13.6519 11.3795 12.7232 12.3081C12.1652 12.8661 11.4817 13.3003 10.726 13.329C9.45391 13.3772 7.29358 13.0552 5.12653 10.8882C2.95948 8.72114 2.63754 6.56081 2.68576 5.28871C2.71441 4.53306 3.1486 3.84948 3.7066 3.29148C4.63523 2.36284 6.11685 2.48761 6.70646 3.5441Z"
+                stroke="#fff" stroke-width="1.44167" stroke-linecap="round"/>
+          </svg>
+          +7 (499) 226-26-15
+        </a>
+        <a class="header__btn" href="https://wa.me/79915872457" target="_blank">Kontakt na WhatsApp-a</a>
+      </div>
+      <button class="menu-btn menu-btn--header" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M8.70701 5.87859C8.31649 5.48806 7.68332 5.48806 7.2928 5.87859L5.87859 7.2928C5.48806 7.68332 5.48806 8.31649 5.87859 8.70701L6.5843 9.41273C6.58523 9.41366 6.58616 9.41459 6.58709 9.41551L7.2928 10.1212C7.68332 10.5118 8.31649 10.5118 8.70701 10.1212L9.41266 9.41558C9.41363 9.41461 9.41461 9.41364 9.41558 9.41266L10.1212 8.70701C10.5118 8.31649 10.5118 7.68332 10.1212 7.2928L8.70701 5.87859ZM16.9999 5.99991H18.9999V7.99307L18.9999 7.99991L18.9999 8.00675V9.99991H16.9999H14.9999V5.99991H16.9999ZM16.2928 14.8786L15.5925 15.5789L15.5789 15.5925L14.8786 16.2928C14.4881 16.6833 14.4881 17.3165 14.8786 17.707L15.5789 18.4073L15.5925 18.4209L16.2928 19.1212C16.6834 19.5118 17.3165 19.5118 17.707 19.1212L19.1213 17.707C19.5118 17.3165 19.5118 16.6833 19.1213 16.2928L17.707 14.8786C17.3165 14.4881 16.6834 14.4881 16.2928 14.8786ZM7.99987 19.1434C9.18369 19.1434 10.1434 18.1837 10.1434 16.9999C10.1434 15.8161 9.18369 14.8564 7.99987 14.8564C6.81605 14.8564 5.85637 15.8161 5.85637 16.9999C5.85637 18.1837 6.81605 19.1434 7.99987 19.1434Z"
+                fill="white"/>
+        </svg>
+        <span>Меню</span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="header__mobile">
+  <a class="header__btn mobile-adaptive" href="https://wa.me/79915872457" target="_blank">Связаться в WhatsApp</a>
+  <a class="header__phone mobile-adaptive" href="tel:+74992262615">
+    <span class="sr-only">Открыть номер телефона</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+      <path
+          d="M6.70646 3.5441L7.13913 4.31939C7.5296 5.01904 7.37285 5.93687 6.75787 6.55185C6.75787 6.55186 6.75787 6.55186 6.75787 6.55186C6.75776 6.55197 6.01201 7.29792 7.36441 8.65031C8.71617 10.0021 9.46208 9.25763 9.46286 9.25685C9.46288 9.25683 9.46287 9.25684 9.4629 9.25682C10.0779 8.64186 10.9957 8.48513 11.6953 8.87559L12.4706 9.30826C13.5271 9.89787 13.6519 11.3795 12.7232 12.3081C12.1652 12.8661 11.4817 13.3003 10.726 13.329C9.45391 13.3772 7.29358 13.0552 5.12653 10.8882C2.95948 8.72114 2.63754 6.56081 2.68576 5.28871C2.71441 4.53306 3.1486 3.84948 3.7066 3.29148C4.63523 2.36284 6.11685 2.48761 6.70646 3.5441Z"
+          stroke="#fff" stroke-width="1.44167" stroke-linecap="round"/>
+    </svg>
+    +7 (499) 226-26-15
+  </a>
+  <nav class="header__nav mobile">
+    <ul class="header__list">
+      <li>
+        <a class="header__link mobile" href="#about">О проекте</a>
+      </li>
+      <li>
+        <a class="header__link mobile" href="#serbia">Сербия</a>
+      </li>
+      <li>
+        <a class="header__link mobile" href="#investments">Инвестиции</a>
+      </li>
+      <li>
+        <a class="header__link mobile" href="#buy">Покупка</a>
+      </li>
+      <li>
+        <a class="header__link mobile" href="#contacts">Контакты</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<button class="info__btn" type="button">
+  <svg width="16" height="38" viewBox="0 0 16 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M0.118519 15.0058C3.95062 14.636 7.28889 13.8779 10.1333 12.7314C10.6272 12.9163 10.9728 13.1567 11.1704 13.4526C11.1704 23.0496 11.2494 29.91 11.4074 34.0336C11.4272 34.5144 11.5753 34.9304 11.8519 35.2818C12.1481 35.6146 12.563 35.8735 13.0963 36.0584C13.6296 36.2433 14.0741 36.382 14.4296 36.4745C14.7852 36.5484 15.2494 36.6224 15.8222 36.6964C15.9407 36.9182 16 37.1494 16 37.3898C16 37.6302 15.9407 37.8336 15.8222 38C13.2148 37.889 10.6864 37.8336 8.23704 37.8336C5.82716 37.8336 3.31852 37.889 0.711111 38C0.632099 37.7041 0.592593 37.5007 0.592593 37.3898C0.592593 37.2973 0.632099 37.0662 0.711111 36.6964C1.36296 36.6224 1.8963 36.5484 2.31111 36.4745C2.72593 36.382 3.23951 36.2433 3.85185 36.0584C4.4642 35.8735 4.92839 35.6146 5.24444 35.2818C5.56049 34.9304 5.72839 34.5144 5.74815 34.0336C5.82716 32.2029 5.86667 29.9839 5.86667 27.3766C5.86667 26.5075 5.85679 25.0282 5.83704 22.9387C5.81728 20.8491 5.80741 19.0185 5.80741 17.4467C4.68148 16.7995 2.78519 16.4204 0.118519 16.3095C0.0395062 16.0136 0 15.7825 0 15.6161C0 15.5051 0.0395062 15.3017 0.118519 15.0058ZM4.77037 3.41168C4.77037 2.46861 5.12593 1.66423 5.83704 0.99854C6.5679 0.332847 7.42716 0 8.41481 0C9.42222 0 10.2815 0.332847 10.9926 0.99854C11.7037 1.66423 12.0593 2.46861 12.0593 3.41168C12.0593 4.33625 11.7037 5.14063 10.9926 5.82482C10.2815 6.49051 9.42222 6.82336 8.41481 6.82336C7.42716 6.82336 6.5679 6.49051 5.83704 5.82482C5.12593 5.14063 4.77037 4.33625 4.77037 3.41168Z"
+        fill="white"/>
+  </svg>
+</button>
+<ul class="info__list">
+  <li>
+    <a class="info__link" href="tel:+74992262615">
+      +7 (499) 226-26-15
+      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
+        <path
+            d="M10.3817 21.3099C16.1154 21.3099 20.7635 16.5395 20.7635 10.6549C20.7635 4.77038 16.1154 0 10.3817 0C4.64807 0 0 4.77038 0 10.6549C0 16.5395 4.64807 21.3099 10.3817 21.3099Z"
+            fill="#687351"/>
+        <path
+            d="M13.2741 11.4947L16.9287 15.1493L15.079 16.999C14.7565 17.3199 14.3735 17.5737 13.9523 17.7455C13.531 17.9174 13.0798 18.0038 12.6249 18C8.39688 18 2.99988 12.603 2.99988 8.375C2.99603 7.92006 3.08253 7.46887 3.25436 7.04761C3.42619 6.62634 3.67993 6.24338 4.00088 5.92092L5.85063 4.07117L9.50521 7.72575L7.09896 10.132C7.81466 11.8319 9.16509 13.1857 10.8632 13.9056L13.2741 11.4947ZM15.5585 4H12.9165V5.16667H15.0253L11.7499 8.445L12.5747 9.26983L15.8332 6.00842V8.08333H16.9999V5.45833C17.0017 5.07392 16.851 4.70446 16.5808 4.43106C16.3105 4.15765 15.9429 4.00262 15.5585 4Z"
+            fill="white"/>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a class="info__link" href="https://t.me/ikkikan" target="_blank">
+      @ikkikan
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <path
+            d="M11.0971 21.4001C16.8307 21.4001 21.4788 16.6297 21.4788 10.7451C21.4788 4.86059 16.8307 0.09021 11.0971 0.09021C5.3634 0.09021 0.715332 4.86059 0.715332 10.7451C0.715332 16.6297 5.3634 21.4001 11.0971 21.4001Z"
+            fill="#34AADF"/>
+        <path
+            d="M5.16575 10.5118C5.16575 10.5118 10.3083 8.26637 12.0919 7.47571C12.7756 7.15947 15.0942 6.14742 15.0942 6.14742C15.0942 6.14742 16.1643 5.70469 16.0751 6.77994C16.0454 7.22272 15.8076 8.77235 15.5698 10.4485C15.2131 12.8205 14.8266 15.4137 14.8266 15.4137C14.8266 15.4137 14.7672 16.1412 14.2619 16.2676C13.7565 16.3941 12.9242 15.8249 12.7756 15.6984C12.6566 15.6035 10.5461 14.1803 9.77325 13.4846C9.56516 13.2948 9.32737 12.9154 9.80296 12.4726C10.8731 11.4289 12.1513 10.1323 12.9242 9.31002C13.2809 8.93049 13.6376 8.04498 12.1513 9.12023C10.0408 10.6699 7.95998 12.1247 7.95998 12.1247C7.95998 12.1247 7.48435 12.4409 6.59259 12.1563C5.70078 11.8717 4.66037 11.4922 4.66037 11.4922C4.66037 11.4922 3.94699 11.0178 5.16575 10.5118Z"
+            fill="white"/>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a class="info__link" href="mailto:IKAN-IKK@yandex.com">
+      IKAN-IKK@yandex.com
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none">
+        <path d="M2.017 14.8082H5.08727V7.35184L0.701172 4.06227V13.4924C0.701172 14.2205 1.2911 14.8082 2.017 14.8082Z"
+              fill="#4285F4"/>
+        <path d="M15.6139 14.8082H18.6842C19.4123 14.8082 20 14.2183 20 13.4924V4.06227L15.6139 7.35184"
+              fill="#34A853"/>
+        <path d="M15.6139 1.65001V7.35184L20 4.06227V2.30792C20 0.680679 18.1425 -0.246981 16.842 0.728926"
+              fill="#FBBC04"/>
+        <path d="M5.08727 7.35184V1.64991L10.3506 5.5974L15.6139 1.65001V7.35184L10.3506 11.2993" fill="#EA4335"/>
+        <path
+            d="M0.701172 2.30792V4.06227L5.08727 7.35184V1.64991L3.85916 0.728926C2.55649 -0.246981 0.701172 0.680679 0.701172 2.30792Z"
+            fill="#C5221F"/>
+      </svg>
+    </a>
+  </li>
+</ul>
+<main>
+  <section class="home indent">
+    <div class="container">
+      <div class="home__inner before-75">
+        <p class="home__country">
+          <img class="home__country-img" src="images/icons/serbia.svg" width="19" height="19" alt="Сербия">
+          Srbija, Zlatibor
+        </p>
+        <ul class="home__benefits">
+          <li class="home__benefit">
+            Управљачка компанија
+          </li>
+          <li class="home__benefit">
+            Skijaški centar
+          </li>
+          <li class="home__benefit">
+            Jednostavno plaćanje: € ₽ ₿
+          </li>
+        </ul>
+        <h1 class="home__title">Vaš dom u srcu Srbije: apartmani za život <br> i investicije</h1>
+        <a class="home__btn desktop" href="#form">Dobiti ponudu</a>
+        <ul class="home__items">
+          <li class="home__item">
+            <p class="home__name">Završetak projekta:</p>
+            <p class="home__answer">Novembar 2025</p>
+          </li>
+          <li class="home__item">
+            <p class="home__name">Prinos od investicija:</p>
+            <p class="home__answer">5-12% godišnje</p>
+          </li>
+          <li class="home__item">
+            <p class="home__name">Cena:</p>
+            <p class="home__answer">od €75.000</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="apartments" id="about">
+    <div class="container">
+      <div class="apartments__inner">
+        <div class="apartments__svetogorska">
+          <h2 class="title-section">Svetogorska 27</h2>
+          <div class="apartments__price mobile before-60" style="background-image: url('images/apar-1.webp')">
+            <p class="apartments__text">
+              Апартаменты в экологически чистом районе с уникальной природой.
+            </p>
+          </div>
+          <p class="apartments__description">
+            Kompleks od <span>28 modernih apartmana</span> u srcu Zlatibora, popularnog turističkog regiona Srbije.
+            Stabilna potražnja za izdavanje i celogodišnji turistički tok čine ovaj projekat odličnim izborom za investicije
+          </p>
+          <div class="apartments__wrapper">
+            <div class="apartments__price before-60" style="background-image: url('images/apar-2.webp')">
+              <p class="apartments__text">
+                Povoljna cena po kvadratnom metru — odlična ponuda na tržištu nekretnina.
+              </p>
+            </div>
+            <div class="apartments__price-text">
+              od <span>€2.300</span>
+            </div>
+          </div>
+        </div>
+        <div class="apartments__benefits">
+          <div class="apartments__price one before-60" style="background-image: url('images/apar-1.webp')">
+            <p class="apartments__text">
+              Apartmani u ekološki čistom području sa jedinstvenom prirodom.
+            </p>
+          </div>
+          <ul class="apartments__list">
+            <li class="apartments__item">
+              <img src="images/icons/parking.svg" width="74" height="74" alt="Паркинг">
+              <p>
+                Parking <br> za stanare
+              </p>
+            </li>
+            <li class="apartments__item">
+              <img src="images/icons/clear.svg" width="74" height="74" alt="Чистовой ремонт">
+              <p>
+                Završni radovi ili nameštaj
+              </p>
+            </li>
+            <li class="apartments__item">
+              <img src="images/icons/infrastructure.svg" width="74" height="74" alt="Инфраструктура">
+              <p>
+                Praktična infrastruktura
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="layout indent">
+    <div class="container">
+      <div class="layout__inner">
+        <div class="layout__content">
+          <h2 class="layout__title">Izaberite svoj <br> idealan raspored</h2>
+          <p class="layout__text">
+            <span>Od garsonjera površine 28 m² do prostranih dvosobnih apartmana</span>
+            — imamo opciju za svakoga! Takođe, u ponudi <span>je poslovni prostor</span>, savršen za vašu delatnost.
+          </p>
+          <img class="layout__img mobile" src="images/layout-plan.webp" width="448" height="300"
+               alt="Получить свою планировку">
+          <a class="layout__btn desktop" href="#form">Preuzmite prezentaciju</a>
+        </div>
+        <img class="layout__img" src="images/layout-plan.webp" width="448" height="300" alt="Получить свою планировку">
+      </div>
+    </div>
+  </section>
+  <section class="statistics indent" id="serbia">
+    <div class="container">
+      <h2 class="title-section">Сербия <br> в цифрах</h2>
+      <ul class="statistics__list">
+        <li class="statistics__item">
+          <span class="statistics__number">8%</span>
+          <p class="statistics__text">
+            Ожидаемый рост цен на недвижимость в туристических регионах Сербии к 2025 году.
+          </p>
+        </li>
+        <li class="statistics__item">
+          <span class="statistics__number">7%</span>
+          <p class="statistics__text">
+            Средняя доходность от сдачи недвижимости в аренду по данным локального рынка.
+          </p>
+        </li>
+        <li class="statistics__item">
+          <span class="statistics__number">5%</span>
+          <p class="statistics__text">
+            Прогнозируемый рост ВВП Сербии в 2025 году, по данным МВФ.
+          </p>
+        </li>
+        <li class="statistics__item">
+          <span class="statistics__number">4 млн</span>
+          <p class="statistics__text">
+            Иностранных туристов ожидается в 2025 году, согласно Министерству туризма Сербии.
+          </p>
+        </li>
+        <li class="statistics__item">
+          <span class="statistics__number">100+ млн €</span>
+          <p class="statistics__text">
+            Планируемые инвестиции в развитие курортной инфраструктуры Сербии до 2025 года.
+          </p>
+        </li>
+        <li class="statistics__item">
+          <span class="statistics__number">Круглый год</span>
+          <p class="statistics__text">
+            Туристический сезон: горнолыжные курорты зимой, озёра и трекинг летом.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="investments" id="investments">
+    <div class="container">
+      <h2 class="title-section">Инвестиции</h2>
+      <div class="investments__inner">
+        <div class="investments__content">
+          <p class="investments__description">
+            Наш комплекс идеально подходит как для личного использования, так и для сдачи в аренду.
+          </p>
+          <ul class="investments__items">
+            <li>
+              <img class="investments__icon big" src="images/investments/1.svg" width="74" height="74"
+                   alt="Евро валюта">
+              <span class="investments__subtext">Евро как валюта дохода</span>
+            </li>
+            <li>
+              <img class="investments__icon" src="images/investments/2.svg" width="74" height="74"
+                   alt="Управляющая компания">
+              <span class="investments__subtext">Управляющая компания</span>
+            </li>
+          </ul>
+        </div>
+        <div class="investments__wrapper">
+          <span class="investments__inscription">Коммереческая недвижимость</span>
+          <div class="investments__commerce before-80">
+            <p class="investments__text">
+              Кроме жилых апартаментов, в комплексе предусмотрено коммерческое помещение, которое идеально
+              подходит для бизнеса или долгосрочной аренды.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="investments__bottom">
+        <p>
+          <span>Самостоятельная сдача.</span>
+          Вы сами контролируете процесс аренды и получаете весь доход напрямую. Спрос на аренду
+          обеспечен благодаря круглогодичному потоку туристов, популярности Златибора как курорта и удобной локации
+          нашего
+          комплекса.
+        </p>
+        <p>
+          <span class="two">Управляющая компания.</span>
+          Мы предлагаем полный цикл услуг по сдаче в аренду: от поиска арендаторов до обслуживания
+          апартаментов. Это делает инвестиции удобными и гарантирует стабильный доход.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="prices" id="buy">
+    <div class="container">
+      <div class="prices__inner">
+        <div class="prices__content">
+          <h2 class="prices__title title-section">
+            <span>Два</span> варианта цены
+          </h2>
+          <p class="prices__description">
+            Мы стремимся сделать покупку максимально удобной и доступной, поэтому разработали два варианта оплаты.
+            <br> <br>
+            Вы сами выбираете условия, которые соответствуют вашим потребностям, а мы гарантируем прозрачность и
+            удобство
+            на каждом этапе сделки.
+          </p>
+        </div>
+        <ul class="prices__cards">
+          <li class="prices__card">
+            <span class="prices__inscription">Выгодно</span>
+            <h3 class="prices__name">Полная оплата</h3>
+            <p class="prices__text top">
+              от <span>€75 000</span> <br> при единовременной оплате
+            </p>
+            <p class="prices__text">
+              Общая экономия: <br>
+              <span class="small">€15 000</span>
+            </p>
+            <p class="prices__signature">
+              Быстрое оформление сделки для вашего удобства.
+            </p>
+          </li>
+          <li class="prices__card">
+            <span class="prices__inscription">Комфортно</span>
+            <h3 class="prices__name">Рассрочка</h3>
+            <p class="prices__text top">
+              от <span>€99 000</span> <br> с гибким графиком платежей
+            </p>
+            <p class="prices__text">
+              Платежи по схеме: <br>
+              <span class="small">30% / 30% / 30% / 10%</span>
+            </p>
+            <p class="prices__signature">
+              Оплата всей стоимости должна быть произведена до сдачи объекта.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="form indent" id="form">
+    <div class="container">
+      <div class="form__inner">
+        <div class="form__content">
+          <h2 class="form__title">
+            Получите презентацию <br> с планировкой и ценами оставив свои данные:
+          </h2>
+          <p class="form__text">
+            Оставьте ваш номер, и мы свяжемся с вами, чтобы предоставить полную презентацию,
+            ответить на вопросы и обсудить детали в удобное время.
+          </p>
+        </div>
+        <form class="form__form" method="post">
+          <label>
+            <input class="input" type="text" id="name" name="name" placeholder="Имя" required>
+          </label>
+          <label>
+            <input class="input" data-tel-input type="text" id="phone" name="phone" placeholder="+7 (999) 999-99-99"
+                   required>
+          </label>
+          <div class="form__agree">
+            <div class="form__agree-figure active" data-agree="newsletter">
+              <button class="form__agree-btn" type="button">
+                <span class="sr-only">Согласен / Не согласен на обработку данных</span>
+              </button>
+            </div>
+            Согласие на рассылку новостей и рекламных сообщений
+          </div>
+          <div class="form__agree">
+            <div class="form__agree-figure active" data-agree="privacy-policy">
+              <button class="form__agree-btn" type="button">
+                <span class="sr-only">Согласен / Не согласен на обработку данных</span>
+              </button>
+            </div>
+            <p>
+              Согласие с <a href="files/policy.pdf" target="_blank">политикой конфиденциальности</a>
+            </p>
+          </div>
+          <button class="form__btn" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="steps indent">
+    <div class="container">
+      <h2 class="steps__title title-section">Покупка по шагам — просто и удобно!</h2>
+      <svg class="steps__svg" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" height="42"
+           width="42">
+        <rect class="tooltip-horizontal-scroll-icon_card" x="480" width="200" height="200" rx="5"
+              fill="rgba(190,190,190,0.3)"></rect>
+        <rect class="tooltip-horizontal-scroll-icon_card" y="0" width="200" height="200" rx="5"
+              fill="rgba(190,190,190,0.3)"></rect>
+        <rect class="tooltip-horizontal-scroll-icon_card" x="240" width="200" height="200" rx="5"
+              fill="rgba(190,190,190,0.3)"></rect>
+        <path class="tooltip-horizontal-scroll-icon_hand"
+              d="M78.9579 285.7C78.9579 285.7 37.8579 212.5 20.5579 180.8C-2.44209 138.6 -6.2422 120.8 9.6579 112C19.5579 106.5 33.2579 108.8 41.6579 123.4L61.2579 154.6V32.3C61.2579 32.3 60.0579 0 83.0579 0C107.558 0 105.458 32.3 105.458 32.3V91.7C105.458 91.7 118.358 82.4 133.458 86.6C141.158 88.7 150.158 92.4 154.958 104.6C154.958 104.6 185.658 89.7 200.958 121.4C200.958 121.4 236.358 114.4 236.358 151.1C236.358 187.8 192.158 285.7 192.158 285.7H78.9579Z"
+              fill="rgba(190,190,190,1)"></path>
+      </svg>
+      <ul class="steps__list">
+        <li class="steps__card before-80" style="background-image: url('images/steps/1.webp')">
+          <div class="steps__head">
+            <span class="steps__name">1 шаг</span>
+            <img class="steps__img" src="images/icons/steps-arrow.svg" width="21" height="29" alt="стрелка иконка">
+          </div>
+          <p class="steps__description">
+            <span>Выбор апартамента</span> <br>
+            Звоните или пишите — мы поможем выбрать идеальные апартаменты,
+            которые подходят именно вам. Все подберем быстро и удобно.
+          </p>
+        </li>
+        <li class="steps__card">
+          <div class="steps__head">
+            <span class="steps__name">2 шаг</span>
+            <img class="steps__img rotate-90" src="images/icons/steps-arrow.svg" width="21" height="29"
+                 alt="стрелка иконка">
+          </div>
+          <p class="steps__description">
+            <span>Удобные способы оплаты</span> <br>
+            Вы можете оплатить как вам удобно: рублями, криптовалютой или любым другим способом —
+            мы сделаем все для вашего комфорта.
+          </p>
+        </li>
+        <li class="steps__card before-80 three" style="background-image: url('images/steps/3.webp')">
+          <div class="steps__head">
+            <span class="steps__name">3 шаг</span>
+            <img class="steps__img" src="images/icons/steps-arrow.svg" width="21" height="29"
+                 alt="стрелка иконка">
+          </div>
+          <p class="steps__description">
+            <span>Оформление документов</span> <br>
+            Мы позаботимся обо всех юридических вопросах и оформим все необходимые документы, вне
+            зависимости от вашего гражданства.
+          </p>
+        </li>
+        <li class="steps__card before-80 four" style="background-image: url('images/steps/4.webp')">
+          <div class="steps__head">
+            <span class="steps__name">4 шаг</span>
+          </div>
+          <p class="steps__description">
+            <span>ВНЖ и помощь в его оформлении</span> <br>
+            Если нужно — поможем с оформлением ВНЖ. Все вопросы решим,
+            чтобы процесс прошел без лишних трудностей.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="contacts" id="contacts">
+    <div class="container">
+      <h2 class="title-section">Готовы узнать больше?</h2>
+      <a class="contacts__callback contacts__subtitle mobile-adaptive desktop" href="#form">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M2 14L14 2" stroke="white" stroke-width="3"/>
+          <path d="M1 2H14V15" stroke="white" stroke-width="3"/>
+        </svg>
+        Закажите <br> обратный звонок
+      </a>
+      <div class="contacts__items">
+        <div class="contacts__item">
+          <h3 class="contacts__subtitle">Связаться с менеджером:</h3>
+          <ul class="contacts__phones">
+            <li>
+              <a class="contacts__phone whatsapp" href="https://wa.me/79915872457" target="_blank">
+                <span class="sr-only">Открыть ссылку на Whatsapp</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                  <path
+                      d="M0 35L2.5132 25.6712C0.486367 22.0371 -0.157578 17.7965 0.699529 13.7274C1.55664 9.65836 3.8573 6.03383 7.17935 3.51893C10.5014 1.00403 14.622 -0.232538 18.785 0.0361282C22.948 0.304795 26.8742 2.06068 29.8431 4.98157C32.8119 7.90247 34.6244 11.7924 34.9478 15.9377C35.2712 20.0829 34.0839 24.2054 31.6038 27.5486C29.1236 30.8918 25.517 33.2314 21.4457 34.1382C17.3744 35.0451 13.1115 34.4582 9.43934 32.4854L0 35ZM9.89448 28.9944L10.4783 29.3396C13.1381 30.9109 16.2448 31.5611 19.3141 31.1889C22.3834 30.8168 25.243 29.4431 27.4473 27.2821C29.6515 25.121 31.0766 22.294 31.5004 19.2414C31.9242 16.1889 31.323 13.0824 29.7903 10.406C28.2577 7.72957 25.8798 5.63363 23.0272 4.44477C20.1746 3.25591 17.0075 3.04091 14.0195 3.83328C11.0315 4.62565 8.39044 6.38088 6.50784 8.82544C4.62524 11.27 3.60689 14.2666 3.61149 17.3482C3.60898 19.9033 4.31801 22.4091 5.65964 24.5864L6.02574 25.188L4.62072 30.3947L9.89448 28.9944Z"
+                      fill="#00D95F"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M24.0631 19.7435C23.7209 19.4684 23.3202 19.2748 22.8915 19.1774C22.4629 19.08 22.0176 19.0813 21.5895 19.1814C20.9464 19.4477 20.5308 20.4535 20.1152 20.9564C20.0276 21.077 19.8988 21.1616 19.7531 21.1942C19.6074 21.2269 19.4547 21.2055 19.3237 21.1339C16.9691 20.2148 14.9955 18.5293 13.7234 16.3512C13.6149 16.2153 13.5635 16.0427 13.5802 15.8698C13.5968 15.6969 13.68 15.5372 13.8125 15.4242C14.2759 14.9669 14.6163 14.4005 14.8019 13.7774C14.8431 13.0901 14.6851 12.4054 14.3468 11.8051C14.0852 10.9635 13.5873 10.2141 12.9121 9.64548C12.5638 9.48936 12.1776 9.43701 11.8001 9.49475C11.4227 9.5525 11.07 9.71786 10.7847 9.9709C10.2895 10.3968 9.89639 10.9279 9.6344 11.5252C9.3724 12.1226 9.24818 12.7709 9.27088 13.4224C9.27241 13.7882 9.31893 14.1525 9.40941 14.5071C9.63916 15.359 9.9925 16.173 10.4582 16.9231C10.7942 17.4978 11.1609 18.0541 11.5565 18.5897C12.8423 20.349 14.4587 21.8427 16.3158 22.9879C17.2477 23.5698 18.2437 24.043 19.2841 24.3981C20.3649 24.8863 21.5582 25.0738 22.7373 24.9404C23.4091 24.8391 24.0456 24.5747 24.5908 24.1706C25.136 23.7665 25.5732 23.2351 25.8639 22.623C26.0347 22.2533 26.0866 21.8399 26.0124 21.4396C25.8343 20.6212 24.736 20.1379 24.0631 19.7435Z"
+                        fill="#00D95F"/>
+                </svg>
+                +7 (991) 587-24-57
+              </a>
+            </li>
+            <li>
+              <a class="contacts__phone telegram" href="https://t.me/ikkikan" target="_blank">
+                <span class="sr-only">Открыть ссылку на Telegram</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="40" viewBox="0 0 39 40" fill="none">
+                  <path
+                      d="M19.1789 39.3437C29.7409 39.3437 38.3032 30.6592 38.3032 19.9463C38.3032 9.23337 29.7409 0.548828 19.1789 0.548828C8.61692 0.548828 0.0546875 9.23337 0.0546875 19.9463C0.0546875 30.6592 8.61692 39.3437 19.1789 39.3437Z"
+                      fill="#34AADF"/>
+                  <path
+                      d="M8.25293 19.5213C8.25293 19.5213 17.7261 15.4336 21.0116 13.9942C22.271 13.4184 26.5422 11.576 26.5422 11.576C26.5422 11.576 28.5135 10.77 28.3492 12.7275C28.2944 13.5336 27.8563 16.3547 27.4183 19.4062C26.7612 23.7243 26.0493 28.4455 26.0493 28.4455C26.0493 28.4455 25.9398 29.7697 25.0089 30C24.0781 30.2303 22.5448 29.194 22.271 28.9636C22.0519 28.791 18.1641 26.2 16.7404 24.9334C16.3571 24.588 15.9191 23.8971 16.7952 23.091C18.7665 21.191 21.1211 18.8305 22.5448 17.3336C23.2019 16.6426 23.859 15.0305 21.1211 16.988C17.2333 19.8092 13.4002 22.4577 13.4002 22.4577C13.4002 22.4577 12.524 23.0334 10.8813 22.5152C9.23852 21.9971 7.32198 21.3062 7.32198 21.3062C7.32198 21.3062 6.00786 20.4426 8.25293 19.5213Z"
+                      fill="white"/>
+                </svg>
+                @ikkikan
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__item transparent">
+          <a class="contacts__callback contacts__subtitle desktop" href="#form">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M2 14L14 2" stroke="white" stroke-width="3"/>
+              <path d="M1 2H14V15" stroke="white" stroke-width="3"/>
+            </svg>
+            Закажите <br> обратный звонок
+          </a>
+          <a class="contacts__social instagram" href="https://www.instagram.com/ikan.serbia?igsh=MzI5bGNmazd2OXI3"
+             target="_blank">
+          <span class="contacts__more">
+            узнать больше
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M2 14L14 2" stroke="white" stroke-width="3"/>
+            <path d="M1 2H14V15" stroke="white" stroke-width="3"/>
+          </svg>
+          </span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51" fill="none">
+              <path
+                  d="M17.4456 25.7808C17.4456 21.1786 21.1776 17.4468 25.7826 17.4468C30.3875 17.4468 34.1216 21.1786 34.1216 25.7808C34.1216 30.383 30.3875 34.1148 25.7826 34.1148C21.1776 34.1148 17.4456 30.383 17.4456 25.7808ZM12.9377 25.7808C12.9377 32.8708 18.6883 38.618 25.7826 38.618C32.8768 38.618 38.6275 32.8708 38.6275 25.7808C38.6275 18.6908 32.8768 12.9436 25.7826 12.9436C18.6883 12.9436 12.9377 18.6908 12.9377 25.7808ZM36.1342 12.4346C36.1339 13.0279 36.3098 13.608 36.6394 14.1015C36.9691 14.595 37.4377 14.9797 37.9861 15.2069C38.5346 15.4342 39.1381 15.4939 39.7204 15.3784C40.3028 15.2628 40.8378 14.9773 41.2577 14.5579C41.6777 14.1385 41.9638 13.6041 42.0799 13.0222C42.1959 12.4403 42.1367 11.8371 41.9097 11.2888C41.6828 10.7406 41.2982 10.2719 40.8047 9.94202C40.3112 9.61218 39.7309 9.436 39.1372 9.43576H39.136C38.3402 9.43613 37.5771 9.75216 37.0142 10.3144C36.4514 10.8767 36.1349 11.6392 36.1342 12.4346ZM15.6765 46.1302C13.2377 46.0192 11.9121 45.6132 11.0311 45.2702C9.86323 44.8158 9.02993 44.2746 8.15381 43.4002C7.27768 42.5258 6.73536 41.6938 6.28269 40.5266C5.93928 39.6466 5.53304 38.3214 5.42217 35.884C5.3009 33.2488 5.27668 32.4572 5.27668 25.781C5.27668 19.1048 5.3029 18.3154 5.42217 15.678C5.53324 13.2406 5.94248 11.918 6.28269 11.0354C6.73736 9.86816 7.27888 9.03536 8.15381 8.15976C9.02873 7.28416 9.86123 6.74216 11.0311 6.28976C11.9117 5.94656 13.2377 5.54056 15.6765 5.42976C18.3133 5.30856 19.1054 5.28436 25.7826 5.28436C32.4598 5.28436 33.2527 5.31056 35.8916 5.42976C38.3305 5.54076 39.6539 5.94976 40.537 6.28976C41.7049 6.74216 42.5382 7.28536 43.4144 8.15976C44.2905 9.03416 44.8308 9.86816 45.2855 11.0354C45.6289 11.9154 46.0351 13.2406 46.146 15.678C46.2673 18.3154 46.2915 19.1048 46.2915 25.781C46.2915 32.4572 46.2673 33.2466 46.146 35.884C46.0349 38.3214 45.6267 39.6462 45.2855 40.5266C44.8308 41.6938 44.2893 42.5266 43.4144 43.4002C42.5394 44.2738 41.7049 44.8158 40.537 45.2702C39.6565 45.6134 38.3305 46.0194 35.8916 46.1302C33.2549 46.2514 32.4628 46.2756 25.7826 46.2756C19.1024 46.2756 18.3125 46.2514 15.6765 46.1302ZM15.4694 0.932162C12.8064 1.05336 10.9867 1.47536 9.39755 2.09336C7.75177 2.73156 6.35853 3.58776 4.9663 4.97696C3.57406 6.36616 2.71955 7.76076 2.08097 9.40556C1.46259 10.9948 1.04034 12.8124 0.919069 15.4738C0.795795 18.1394 0.767578 18.9916 0.767578 25.7808C0.767578 32.57 0.795795 33.4222 0.919069 36.0878C1.04034 38.7494 1.46259 40.5668 2.08097 42.156C2.71955 43.7998 3.57426 45.196 4.9663 46.5846C6.35833 47.9732 7.75177 48.8282 9.39755 49.4682C10.9897 50.0862 12.8064 50.5082 15.4694 50.6294C18.138 50.7506 18.9893 50.7808 25.7826 50.7808C32.5759 50.7808 33.4286 50.7526 36.0958 50.6294C38.759 50.5082 40.5774 50.0862 42.1676 49.4682C43.8124 48.8282 45.2066 47.9738 46.5989 46.5846C47.9911 45.1954 48.8438 43.7998 49.4842 42.156C50.1026 40.5668 50.5268 38.7492 50.6461 36.0878C50.7674 33.4202 50.7956 32.57 50.7956 25.7808C50.7956 18.9916 50.7674 18.1394 50.6461 15.4738C50.5248 12.8122 50.1026 10.9938 49.4842 9.40556C48.8438 7.76176 47.9889 6.36836 46.5989 4.97696C45.2088 3.58556 43.8124 2.73156 42.1696 2.09336C40.5775 1.47536 38.7588 1.05136 36.0978 0.932162C33.4306 0.810962 32.5779 0.780762 25.7846 0.780762C18.9913 0.780762 18.138 0.808962 15.4694 0.932162Z"
+                  fill="url(#paint0_radial_2002_47)"/>
+              <path
+                  d="M17.4456 25.7808C17.4456 21.1786 21.1776 17.4468 25.7826 17.4468C30.3875 17.4468 34.1216 21.1786 34.1216 25.7808C34.1216 30.383 30.3875 34.1148 25.7826 34.1148C21.1776 34.1148 17.4456 30.383 17.4456 25.7808ZM12.9377 25.7808C12.9377 32.8708 18.6883 38.618 25.7826 38.618C32.8768 38.618 38.6275 32.8708 38.6275 25.7808C38.6275 18.6908 32.8768 12.9436 25.7826 12.9436C18.6883 12.9436 12.9377 18.6908 12.9377 25.7808ZM36.1342 12.4346C36.1339 13.0279 36.3098 13.608 36.6394 14.1015C36.9691 14.595 37.4377 14.9797 37.9861 15.2069C38.5346 15.4342 39.1381 15.4939 39.7204 15.3784C40.3028 15.2628 40.8378 14.9773 41.2577 14.5579C41.6777 14.1385 41.9638 13.6041 42.0799 13.0222C42.1959 12.4403 42.1367 11.8371 41.9097 11.2888C41.6828 10.7406 41.2982 10.2719 40.8047 9.94202C40.3112 9.61218 39.7309 9.436 39.1372 9.43576H39.136C38.3402 9.43613 37.5771 9.75216 37.0142 10.3144C36.4514 10.8767 36.1349 11.6392 36.1342 12.4346ZM15.6765 46.1302C13.2377 46.0192 11.9121 45.6132 11.0311 45.2702C9.86323 44.8158 9.02993 44.2746 8.15381 43.4002C7.27768 42.5258 6.73536 41.6938 6.28269 40.5266C5.93928 39.6466 5.53304 38.3214 5.42217 35.884C5.3009 33.2488 5.27668 32.4572 5.27668 25.781C5.27668 19.1048 5.3029 18.3154 5.42217 15.678C5.53324 13.2406 5.94248 11.918 6.28269 11.0354C6.73736 9.86816 7.27888 9.03536 8.15381 8.15976C9.02873 7.28416 9.86123 6.74216 11.0311 6.28976C11.9117 5.94656 13.2377 5.54056 15.6765 5.42976C18.3133 5.30856 19.1054 5.28436 25.7826 5.28436C32.4598 5.28436 33.2527 5.31056 35.8916 5.42976C38.3305 5.54076 39.6539 5.94976 40.537 6.28976C41.7049 6.74216 42.5382 7.28536 43.4144 8.15976C44.2905 9.03416 44.8308 9.86816 45.2855 11.0354C45.6289 11.9154 46.0351 13.2406 46.146 15.678C46.2673 18.3154 46.2915 19.1048 46.2915 25.781C46.2915 32.4572 46.2673 33.2466 46.146 35.884C46.0349 38.3214 45.6267 39.6462 45.2855 40.5266C44.8308 41.6938 44.2893 42.5266 43.4144 43.4002C42.5394 44.2738 41.7049 44.8158 40.537 45.2702C39.6565 45.6134 38.3305 46.0194 35.8916 46.1302C33.2549 46.2514 32.4628 46.2756 25.7826 46.2756C19.1024 46.2756 18.3125 46.2514 15.6765 46.1302ZM15.4694 0.932162C12.8064 1.05336 10.9867 1.47536 9.39755 2.09336C7.75177 2.73156 6.35853 3.58776 4.9663 4.97696C3.57406 6.36616 2.71955 7.76076 2.08097 9.40556C1.46259 10.9948 1.04034 12.8124 0.919069 15.4738C0.795795 18.1394 0.767578 18.9916 0.767578 25.7808C0.767578 32.57 0.795795 33.4222 0.919069 36.0878C1.04034 38.7494 1.46259 40.5668 2.08097 42.156C2.71955 43.7998 3.57426 45.196 4.9663 46.5846C6.35833 47.9732 7.75177 48.8282 9.39755 49.4682C10.9897 50.0862 12.8064 50.5082 15.4694 50.6294C18.138 50.7506 18.9893 50.7808 25.7826 50.7808C32.5759 50.7808 33.4286 50.7526 36.0958 50.6294C38.759 50.5082 40.5774 50.0862 42.1676 49.4682C43.8124 48.8282 45.2066 47.9738 46.5989 46.5846C47.9911 45.1954 48.8438 43.7998 49.4842 42.156C50.1026 40.5668 50.5268 38.7492 50.6461 36.0878C50.7674 33.4202 50.7956 32.57 50.7956 25.7808C50.7956 18.9916 50.7674 18.1394 50.6461 15.4738C50.5248 12.8122 50.1026 10.9938 49.4842 9.40556C48.8438 7.76176 47.9889 6.36836 46.5989 4.97696C45.2088 3.58556 43.8124 2.73156 42.1696 2.09336C40.5775 1.47536 38.7588 1.05136 36.0978 0.932162C33.4306 0.810962 32.5779 0.780762 25.7846 0.780762C18.9913 0.780762 18.138 0.808962 15.4694 0.932162Z"
+                  fill="url(#paint1_radial_2002_47)"/>
+              <defs>
+                <radialGradient id="paint0_radial_2002_47" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(7.41436 51.017) scale(65.31 65.2708)">
+                  <stop offset="0.09" stop-color="#FA8F21"/>
+                  <stop offset="0.78" stop-color="#D82D7E"/>
+                </radialGradient>
+                <radialGradient id="paint1_radial_2002_47" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(31.1086 53.257) scale(51.4733 51.4424)">
+                  <stop offset="0.64" stop-color="#8C3AAA" stop-opacity="0"/>
+                  <stop offset="1" stop-color="#8C3AAA"/>
+                </radialGradient>
+              </defs>
+            </svg>
+            <p>@ikan.serbia</p>
+          </a>
+          <a class="contacts__social mail" href="mailto:IKAN-IKK@yandex.com">
+          <span class="contacts__more">
+            отправить письмо
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M2 14L14 2" stroke="white" stroke-width="3"/>
+            <path d="M1 2H14V15" stroke="white" stroke-width="3"/>
+          </svg>
+          </span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="54" height="40" viewBox="0 0 54 40" fill="none">
+              <path d="M3.63545 40H12.1182V19.3992L0 10.3105V36.3646C0 38.3762 1.62989 40 3.63545 40Z" fill="#4285F4"/>
+              <path d="M41.2018 40H49.6845C51.6961 40 53.3199 38.3702 53.3199 36.3646V10.3105L41.2018 19.3992"
+                    fill="#34A853"/>
+              <path
+                  d="M41.2018 3.64576V19.3994L53.3199 10.3108V5.46349C53.3199 0.967648 48.1879 -1.59534 44.5948 1.10095"
+                  fill="#FBBC04"/>
+              <path d="M12.1182 19.3991V3.64551L26.66 14.5519L41.2018 3.64551V19.3991L26.66 30.3055" fill="#EA4335"/>
+              <path
+                  d="M0 5.46349V10.3108L12.1182 19.3994V3.64576L8.72508 1.10095C5.12598 -1.59534 0 0.967648 0 5.46349Z"
+                  fill="#C5221F"/>
+            </svg>
+            <p>IKAN-IKK@yandex.com</p>
+          </a>
+        </div>
+        <div class="contacts__item">
+          <div class="contacts__head">
+            <p>наш канал</p>
+            <img src="images/icons/telegram.svg" width="62" height="62" alt="Иконка телеграм">
+          </div>
+          <h3 class="contacts__subtitle">Интересен ход строительства?</h3>
+          <p class="contacts__text">
+            Мы всегда держим вас в курсе! Получайте актуальные обновления о прогрессе в телеграм канале.
+          </p>
+          <a class="contacts__link" href="https://t.me/ikan_serbia" target="_blank">Перейти в канал</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <img src="images/logo.svg" width="75" height="34" alt="логотип">
+      <div class="footer__info">
+        <p class="footer__copy">© 2024. ИКК-ИКАН</p>
+        <a class="footer__link" href="files/policy.pdf" target="_blank">Политика конфиденциальности</a>
+      </div>
+      <a class="footer__top desktop" href="#header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_1_218)">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.293 8.29303C11.4805 8.10556 11.7348 8.00024 12 8.00024C12.2652 8.00024 12.5195 8.10556 12.707 8.29303L18.364 13.95C18.5462 14.1386 18.6469 14.3912 18.6447 14.6534C18.6424 14.9156 18.5372 15.1664 18.3518 15.3518C18.1664 15.5373 17.9156 15.6424 17.6534 15.6447C17.3912 15.647 17.1386 15.5462 16.95 15.364L12 10.414L7.05 15.364C6.8614 15.5462 6.60879 15.647 6.3466 15.6447C6.0844 15.6424 5.83359 15.5373 5.64818 15.3518C5.46277 15.1664 5.3576 14.9156 5.35532 14.6534C5.35305 14.3912 5.45384 14.1386 5.636 13.95L11.293 8.29303Z"
+                  fill="white"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1_218">
+              <rect width="24" height="24" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+        Венуться наверх
+      </a>
+    </div>
+  </div>
+</footer>
+<div class="modal">
+  <button class="modal__close">
+    <span class="sr-only">Закрыть модальное окно</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M1.19006 1L14.6845 14.4945" stroke="white" stroke-width="2"/>
+      <path d="M14.4945 1L1.00005 14.4945" stroke="white" stroke-width="2"/>
+    </svg>
+  </button>
+  <h3 class="modal__title">
+    Спасибо! Наш менеджер скоро свяжется с вами!
+  </h3>
+  <button class="modal__btn" tabindex="-1" type="button">ОК</button>
+</div>
+<script src="js/main.min.js" type="module"></script>
+<script src="js/phone-mask.js"></script>

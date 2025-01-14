@@ -1,7 +1,6 @@
 @import 'vendor/reset';
 @import 'vendor/fonts';
 @import 'vendor/vars';
-@import 'vendor/libs';
 @import 'vendor/mixin';
 @import 'vendor/global';
 
@@ -12,6 +11,8 @@
 @import "components/form-elements";
 @import "components/scrol-btn";
 @import "components/menu-btn";
+@import "components/modal";
+@import "components/info";
 
 @import "home/home";
 @import "home/statistics";
@@ -22,3 +23,5 @@
 @import "home/apartments";
 @import "home/contacts";
 @import "home/form";
+
+@import "banner";
