@@ -157,7 +157,7 @@
         @include pseudo;
         left: -12px;
         top: 0;
-        width: 108%;
+        width: 114%;
         height: 22px;
         z-index: -1;
         background-image: url("../images/icons/vector-invest.svg");
@@ -171,6 +171,7 @@
         &::before {
           background-image: url("../images/icons/vector-invest-two.svg");
           height: 28px;
+          width: 114%;
           top: -3px;
           @include r($tablet) {
             top: -1px;
