@@ -123,6 +123,115 @@
     }
   }
 
+  &__swap {
+    position: relative;
+    z-index: 5;
+    @include flex-column(6);
+    padding: 5px 7px 5px 5px;
+    border-radius: 10px;
+    background-color: rgba($white, .05);
+    @include r($tablet) {
+      background-color: rgba($white, .1);
+    }
+    @media (max-width: 435px) {
+      display: none;
+    }
+
+    &:hover {
+      .header__swap-wrapper {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+      }
+    }
+
+    &.mobile {
+      display: none;
+      @media (max-width: 435px) {
+        display: flex;
+        margin-bottom: 30px;
+        max-width: max-content;
+      }
+    }
+
+    &-wrapper {
+      padding-top: 15px;
+      opacity: 0;
+      z-index: 30;
+      visibility: hidden;
+      pointer-events: none;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      top: 45px;
+      transition: visibility .4s, transfrom .4s, opacity .4s;
+    }
+
+    &-head {
+      @include flex-align-center(9);
+      cursor: pointer;
+
+      &:hover {
+        color: #badc6b;
+
+        svg path {
+          fill: #badc6b;
+        }
+      }
+    }
+
+    &-list {
+      @include flex-column(6);
+      width: 100%;
+      padding: 6px 7px;
+      border-radius: 8px;
+      border: 1px solid rgba($white, .4);
+      background-color: rgba($black, 1);
+      transition: opacity .4s, transform .4s;
+    }
+
+    &-link {
+      @include flex-align-center(7);
+      border-radius: 5px;
+      padding: 5px;
+      border: 1px solid transparent;
+      transition: background-color .4s, border .4s, color .4s;
+      @include r($tablet) {
+        font-size: 15px;
+      }
+      @include r($phone) {
+        font-size: 14px;
+      }
+      @media (max-width: 435px) {
+        font-size: 15px;
+        padding: 7px 10px;
+      }
+
+      &:hover {
+        background-color: rgba($accent, .3);
+      }
+
+      &:focus {
+        background-color: transparent;
+        border-color: $accent;
+      }
+
+      &.active {
+        background-color: rgba(#FFFFFF, .05);
+        @include r($tablet) {
+          background-color: rgba($white, .12);
+        }
+      }
+
+      img {
+        @include r($tablet) {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+  }
+
   &__btn {
     @include flex-center;
     padding: 12px 25px;
