@@ -1,0 +1,171 @@
+.contacts-new {
+  &__inner {
+    @include flex-align-center(20);
+    justify-content: space-between;
+    align-items: stretch;
+    @media (max-width: 1180px) {
+      max-width: 765px;
+      flex-direction: column;
+      margin: 0 auto;
+    }
+    @media (max-width: 810px) {
+      display: none;
+    }
+  }
+
+  &__content {
+    position: relative;
+    max-width: 765px;
+    width: 100%;
+  }
+
+  &__manager {
+    @include bg;
+    background-image: url("../images/bg-contacts.png");
+    position: relative;
+    min-height: 183px;
+    padding-top: 10px;
+  }
+
+  &__subtitle {
+    margin: 0 20px 35px;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 700;
+    font-family: $halvarRg;
+  }
+
+  &__link {
+    @include flex-align-center(17);
+    font-size: 16px;
+    font-family: $halvarRg;
+    margin-left: 20px;
+    border-radius: 4px;
+    padding: 2px;
+    border: 1px solid transparent;
+    max-width: max-content;
+    transition: color .4s, border .4s;
+
+    &:hover {
+      color: #00D95F;
+    }
+
+    &:focus {
+      border-color: #00bd51;
+      color: $white;
+    }
+  }
+
+  &__start {
+    @include flex-align-center(16);
+    font-family: $halvarRg;
+    color: rgba($white, .5);
+    position: absolute;
+    bottom: 27px;
+    right: 16px;
+    border-radius: 4px;
+    padding: 2px 3px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    transition: color .4s, border .4s;
+
+    &:hover {
+      color: #badc6b;
+
+      svg {
+        transform: translateX(-4px);
+      }
+    }
+
+    &:focus {
+      color: $white;
+      border-color: #badc6b;
+    }
+
+    &.social {
+      bottom: 34px;
+    }
+
+    &.mail {
+      bottom: 24px;
+    }
+  }
+
+  &__item {
+    max-width: 355px;
+    width: 100%;
+    @include r($desktop) {
+      max-width: 340px;
+    }
+    @media (max-width: 1180px) {
+      max-width: 100%;
+    }
+  }
+
+  &__connection {
+    position: relative;
+    @include flex-align-center(20);
+    background-color: rgba($white, .1);
+    border: 1px solid rgba($white, .5);
+    border-radius: 14px;
+    overflow: hidden;
+    min-height: 72px;
+    margin-top: 14px;
+    font-family: $halvarRg;
+    padding: 12px 20px 12px 22px;
+    transition: background-color .4s, color .4s, border .4s;
+
+    &:focus {
+      background-color: transparent;
+      border-color: $white;
+    }
+
+    &::before {
+      @include pseudo;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0;
+      transition: opacity .4s;
+    }
+
+    &.viber {
+      &:hover {
+        border-color: transparent;
+        background-color: #754A91;
+
+        .svg path {
+          fill: $white;
+        }
+      }
+    }
+
+    &.mail {
+      padding: 0;
+      display: block;
+
+      &:hover {
+        .contacts-new__start {
+          color: $white;
+        }
+
+        &::before {
+          border-color: transparent;
+          opacity: 0.8;
+        }
+      }
+
+      &::before {
+        background: linear-gradient(-120deg, #4285f4, #34a853, rgba(251, 188, 5, 0.85), rgba(234, 67, 53, 0.81));
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: 12px 20px 12px 22px;
+    position: relative;
+    @include flex-align-center(20);
+  }
+}
