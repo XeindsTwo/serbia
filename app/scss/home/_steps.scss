@@ -164,5 +164,9 @@
     span {
       font-weight: 700;
     }
+
+    &.short-long {
+      max-width: 560px;
+    }
   }
 }

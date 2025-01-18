@@ -178,6 +178,19 @@
           }
         }
       }
+
+      &.control {
+        &::before {
+          left: -10px;
+          background-image: url("../images/icons/vector-invest-three.svg");
+        }
+      }
+
+      &.management {
+        &::before {
+          width: 117%;
+        }
+      }
     }
   }
 }
