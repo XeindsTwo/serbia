@@ -53,6 +53,10 @@
   @include r($phone) {
     padding: 0 16px;
   }
+
+  &--long {
+    max-width: 1300px;
+  }
 }
 
 .indent {

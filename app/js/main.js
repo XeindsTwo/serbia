@@ -121,3 +121,17 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+new Swiper('.layout__swiper', {
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  speed: 800,
+  spaceBetween: 30,
+  keyboard: {
+    enabled: true,
+  },
+  navigation: {
+    prevEl: '.layout__btn--prev',
+    nextEl: '.layout__btn--next'
+  }
+});

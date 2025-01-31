@@ -1,126 +1,134 @@
 .layout {
-  &__inner {
-    @include flex-align-center(30);
-    justify-content: space-between;
-    background: rgba($white, .1);
+  &__card {
+    cursor: pointer;
+    padding: 37px 45px;
+    background-color: rgba(255, 255, 255, 0.05);
+    stroke-width: 0.5px;
+    stroke: $white;
     border-radius: 19px;
-    padding: 20px 60px 20px;
-    border: 1px solid rgba($white, .5);
-    @media (max-width: 1130px) {
-      padding: 25px 40px;
+    box-shadow: -23px -19px 69.9px 0px rgba(255, 255, 255, 0.15) inset, 0px 4px 31.7px 0px rgba(0, 0, 0, 0.08) inset;
+    backdrop-filter: blur(8.149999618530273px);
+  }
+
+  &__top {
+    position: relative;
+
+    &-name {
+      font-size: 40px;
+      font-family: $halvarRg;
+      font-weight: 700;
+      position: absolute;
+      right: 0;
+      line-height: 1;
+      top: -8px;
     }
-    @media (max-width: 920px) {
-      padding: 30px 30px;
+
+    &-title {
+      font-size: 24px;
+      line-height: 1.1;
+      font-family: $halvarBlk;
+      font-weight: 900;
+      margin-bottom: 24px;
+      max-width: 1020px;
     }
-    @media (max-width: 890px) {
-      flex-direction: column;
-      text-align: center;
+
+    &-text {
+      margin-bottom: 40px;
+      font-size: 15px;
+      line-height: 1.45;
+      max-width: 900px;
+      color: rgba($white, .8);
+      font-family: $halvarRg;
     }
-    @media (max-width: 530px) {
-      text-align: left;
+
+    &-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 40px;
     }
-    @media (max-width: 420px) {
-      padding: 30px 20px;
-      margin: 0 -7px;
+
+    &-price {
+      display: flex;
+      max-width: max-content;
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 700;
+      font-family: $halvarRg;
+      border-radius: 120px;
+      padding: 8px 13px;
+      border: 0.5px solid #FFF;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: -23px -19px 69.9px -37px rgba(255, 255, 255, 0.15) inset, 0px 4px 31.7px 8px rgba(0, 0, 0, 0.08) inset;
+      backdrop-filter: blur(8.149999618530273px);
     }
-    @media (max-width: 400px) {
-      padding: 30px 18px;
-      border-radius: 14px;
+
+    &-square {
+      @include flex-center;
+      font-family: $halvarRg;
+      font-size: 16px;
+      line-height: 1;
+      border-radius: 120px;
+      padding: 8px 18px;
+      background-color: $accent;
     }
   }
 
   &__content {
-    @media (max-width: 890px) {
-      max-width: 540px;
-    }
-  }
+    display: grid;
+    grid-gap: 28px;
+    grid-template-columns: repeat(3, 1fr);
 
-  &__title {
-    max-width: 380px;
-    font-size: 24px;
-    line-height: 1.1;
-    font-family: $halvarBlk;
-    margin-bottom: 18px;
-    @media (max-width: 890px) {
-      margin: 0 auto 18px;
-    }
-    @media (max-width: 530px) {
-      margin: 0 0 22px;
-    }
-    @media (max-width: 410px) {
-      line-height: 1.2;
-      font-size: 22px;
-      margin-bottom: 26px;
-    }
-  }
-
-  &__text {
-    line-height: 1.45;
-    font-family: $halvarRg;
-    margin-bottom: 23px;
-    max-width: 570px;
-    color: rgba($white, .7);
-    @media (max-width: 410px) {
-      font-size: 15px;
+    &-item {
+      @include flex-column(0);
     }
 
-    span {
-      color: $white;
-    }
-  }
-
-  &__btn {
-    display: flex;
-    max-width: max-content;
-    padding: 12px 32px;
-    border-radius: 55px;
-    background: $accent;
-    color: $white;
-    border: 1px solid transparent;
-    transition: color .4s, background-color .4s, border .4s;
-    @include r($phone) {
-      width: 100%;
-    }
-
-    &:hover {
-      background-color: #758551;
-    }
-
-    &:focus {
-      background-color: transparent;
-      border-color: $accent;
+    &-text {
+      font-size: 13px;
+      margin-bottom: 15px;
+      font-family: $halvarRg;
     }
   }
 
   &__img {
     @include objectCoverBg;
-    margin: -15px;
-    @media (max-width: 920px) {
-      width: 420px;
-      height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+    &--big {
+      height: 100%;
+      margin-bottom: 0;
     }
-    @media (max-width: 890px) {
-      display: none;
+  }
+
+  &__btn {
+    @include flex-center;
+    margin-top: auto;
+    background-color: $accent;
+    padding: 8px 23px;
+    border-radius: 120px;
+    max-width: 100%;
+    color: $white;
+    border: 1px solid transparent;
+    transition: border .4s, color .4s, background-color .4s, opacity .4s;
+
+    &:hover {
+      background-color: #879f4e;
+      color: $white;
+      border-color: transparent;
     }
 
-    &.mobile {
-      display: none;
-      @media (max-width: 890px) {
-        display: block;
-        margin: -10px auto 15px;
-      }
-      @media (max-width: 490px) {
-        margin: -10px 0 15px;
-      }
-      @media (max-width: 430px) {
-        margin-top: -15px;
-      }
-      @media (max-width: 380px) {
-        width: 320px;
-        margin-left: -25px;
-        margin-right: -25px;
-        transform: translateX(25px);
-      }
+    &:focus {
+      background-color: transparent;
+      border-color: $accent;
+      color: $white;
+    }
+
+    &.swiper-button-disabled {
+      pointer-events: none;
+      user-select: none;
+      opacity: .6;
     }
   }
 }
