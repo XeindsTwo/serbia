@@ -21,6 +21,10 @@
       right: 0;
       line-height: 1;
       top: -8px;
+
+      @include r($desktop) {
+        font-size: 36px;
+      }
     }
 
     &-title {

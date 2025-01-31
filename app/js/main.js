@@ -127,11 +127,19 @@ new Swiper('.layout__swiper', {
   slidesPerGroup: 1,
   speed: 800,
   spaceBetween: 30,
-  keyboard: {
-    enabled: true,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
   },
+  autoHeight: true,
   navigation: {
     prevEl: '.layout__btn--prev',
     nextEl: '.layout__btn--next'
   }
 });
+
+Fancybox.bind('[data-fancybox="gallery-1"]');
+Fancybox.bind('[data-fancybox="gallery-2"]');
+Fancybox.bind('[data-fancybox="gallery-3"]');
+Fancybox.bind('[data-fancybox="gallery-4"]');
+Fancybox.bind('[data-fancybox="gallery-5"]');

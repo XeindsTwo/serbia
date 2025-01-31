@@ -1,11 +1,9 @@
 @include('components/_head.html')
-
 @include('components/_header.html')
 @include('components/_info.html')
 <main>
   @include('home/_home.html')
   @include('home/_apartments.html')
-  @include('home/_finance.html')
   @include('home/_layout.html')
   @include('home/_statistics.html')
   @include('home/_investments.html')
@@ -16,5 +14,6 @@
 </main>
 @include('components/_footer.html')
 @include('components/_modal.html')
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script src="js/main.min.js" type="module"></script>
 <script src="js/phone-mask.js"></script>
