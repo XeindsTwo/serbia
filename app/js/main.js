@@ -127,10 +127,6 @@ new Swiper('.layout__swiper', {
   slidesPerGroup: 1,
   speed: 800,
   spaceBetween: 30,
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
   autoHeight: true,
   navigation: {
     prevEl: '.layout__btn--prev',
