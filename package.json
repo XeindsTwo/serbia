@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "@fancyapps/ui": "^5.0.36",
     "gulp-imagemin": "^7.1.0",
     "swiper": "^11.2.1",
     "urix": "^0.1.0"

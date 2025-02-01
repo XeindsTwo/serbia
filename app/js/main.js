@@ -53,30 +53,30 @@ document.querySelector('.form__form').addEventListener('submit', function (event
     method: 'POST',
     body: formData
   })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Сетевая ошибка');
-      }
-      return response.json();
-    })
-    .then(data => {
-      if (data.success) {
-        document.cookie = "redirected=true; path=/; max-age=3600";
-        window.location.href = '/thanks';
-      } else {
-        document.getElementById('responseMessage').innerText = 'Произошла ошибка при отправке заявки.';
-      }
-    })
-    .catch(error => {
-      document.getElementById('responseMessage').innerText = 'Произошла ошибка: ' + error.message;
-    });
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Сетевая ошибка');
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (data.success) {
+          document.cookie = "redirected=true; path=/; max-age=3600";
+          window.location.href = '/thanks';
+        } else {
+          document.getElementById('responseMessage').innerText = 'Произошла ошибка при отправке заявки.';
+        }
+      })
+      .catch(error => {
+        document.getElementById('responseMessage').innerText = 'Произошла ошибка: ' + error.message;
+      });
 });
 
 const modal = document.querySelector('.modal');
 modal.addEventListener('click', function (event) {
   if (
-    event.target.classList.contains('modal__close') ||
-    event.target.classList.contains('modal__btn')
+      event.target.classList.contains('modal__close') ||
+      event.target.classList.contains('modal__btn')
   ) {
     closeModal(modal);
   }
@@ -134,8 +134,10 @@ new Swiper('.layout__swiper', {
   }
 });
 
-Fancybox.bind('[data-fancybox="gallery-1"]');
-Fancybox.bind('[data-fancybox="gallery-2"]');
-Fancybox.bind('[data-fancybox="gallery-3"]');
-Fancybox.bind('[data-fancybox="gallery-4"]');
-Fancybox.bind('[data-fancybox="gallery-5"]');
+document.addEventListener('DOMContentLoaded', () => {
+  Fancybox.bind('[data-fancybox="gallery-1"]');
+  Fancybox.bind('[data-fancybox="gallery-2"]');
+  Fancybox.bind('[data-fancybox="gallery-3"]');
+  Fancybox.bind('[data-fancybox="gallery-4"]');
+  Fancybox.bind('[data-fancybox="gallery-5"]');
+});

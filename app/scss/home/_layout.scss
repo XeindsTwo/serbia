@@ -7,7 +7,6 @@
     stroke: $white;
     border-radius: 19px;
     box-shadow: -23px -19px 69.9px 0px rgba(255, 255, 255, 0.15) inset, 0px 4px 31.7px 0px rgba(0, 0, 0, 0.08) inset;
-    backdrop-filter: blur(8.149999618530273px);
     @include r($desktop) {
       padding: 35px 33px;
     }
@@ -98,8 +97,6 @@
       padding: 8px 13px;
       border: 0.5px solid #FFF;
       background: rgba(255, 255, 255, 0.05);
-      box-shadow: -23px -19px 69.9px -37px rgba(255, 255, 255, 0.15) inset, 0px 4px 31.7px 8px rgba(0, 0, 0, 0.08) inset;
-      backdrop-filter: blur(8.149999618530273px);
       @include r($desktop) {
         font-size: 26px;
       }
