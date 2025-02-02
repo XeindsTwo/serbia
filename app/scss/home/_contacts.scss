@@ -20,11 +20,12 @@
     display: none;
     grid-gap: 22px;
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 15px;
     @include r($desktop) {
       grid-template-columns: repeat(2, 1fr);
     }
     @media (max-width: 810px) {
-      display: grid;
+      display: block;
     }
     @include r($tablet) {
       grid-template-columns: repeat(1, 1fr);
@@ -163,8 +164,10 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 19px;
-      font-size: 15px;
       padding: 24px 20px;
+    }
+    @media (max-width: 380px) {
+      font-size: 15px;
     }
 
     & > * {
@@ -289,6 +292,70 @@
           width: 52px;
           height: 52px;
 
+          @include r($desktop) {
+            width: 48px;
+            margin-left: 2px;
+            height: auto;
+          }
+          @media (max-width: 560px) {
+            width: 44px;
+          }
+        }
+      }
+    }
+
+    &.whatsapp {
+      &:hover {
+        border-color: transparent;
+        background-color: #00b24d;
+
+        .contacts__whatsapp path {
+          fill: $white;
+        }
+
+        .contacts__more {
+          color: $white;
+
+          svg {
+            transform: translate(3px, -2px);
+          }
+        }
+      }
+
+      svg {
+        &:nth-child(2) {
+          @include r($desktop) {
+            width: 48px;
+            margin-left: 2px;
+            height: auto;
+          }
+          @media (max-width: 560px) {
+            width: 44px;
+          }
+        }
+      }
+    }
+
+    &.viber {
+      &:hover {
+        border-color: transparent;
+        background-color: #754a91;
+
+        .contacts__viber path {
+          fill: $white;
+        }
+
+        .contacts__more {
+          color: $white;
+
+          svg {
+            transform: translate(3px, -2px);
+          }
+        }
+      }
+
+      svg {
+        &:nth-child(2) {
           @include r($desktop) {
             width: 48px;
             margin-left: 2px;

@@ -1,15 +1,11 @@
 export function scrollToSection(event) {
   event.preventDefault();
-  const targetId = event.target.getAttribute('href').slice(1);
+  const targetId = event.currentTarget.getAttribute('href').slice(1);
   const targetElement = document.getElementById(targetId);
 
-  let targetOffset;
+  if (!targetElement) return;
 
-  if (targetId === 'serbia') {
-    targetOffset = targetElement.offsetTop;
-  } else {
-    targetOffset = targetElement.offsetTop - 30;
-  }
+  let targetOffset = targetId === 'serbia' ? targetElement.offsetTop : targetElement.offsetTop - 30;
 
   window.scrollTo({ top: targetOffset, behavior: 'smooth' });
 }

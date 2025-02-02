@@ -8,15 +8,15 @@
       flex-direction: column;
       margin: 0 auto;
     }
-    @media (max-width: 810px) {
-      display: none;
-    }
   }
 
   &__content {
     position: relative;
     max-width: 765px;
     width: 100%;
+    @media (max-width: 810px) {
+      display: none;
+    }
   }
 
   &__manager {

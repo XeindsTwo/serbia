@@ -311,10 +311,14 @@
       width: 52%;
     }
     @include r($tablet) {
-      padding-top: 110px;
+      padding: 110px 20px 30px;
     }
     @include r($sm) {
       width: 100%;
+    }
+    @include r($phone) {
+      padding-left: 16px;
+      padding-right: 16px;
     }
 
     &.active {
